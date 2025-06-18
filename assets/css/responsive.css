@@ -191,6 +191,10 @@ flex-wrap: wrap;
     background: #00000030;
     border-radius: 10px;
 }
+.vid-controls{
+      flex-wrap: wrap;
+    justify-content: center;
+}
 
 }
 
