@@ -119,6 +119,24 @@ body {
     }
 }
 
+@media (max-width: 1000px) {
+
+    /* all-video responsiveness starts */
+
+    .content-semi-head.mb-5 {
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+    }
+
+    .row .col-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* all-video responsiveness ends */
+
+}
 
 @media (max-width: 740px) {
 
@@ -203,7 +221,7 @@ body {
 
     /* dashboard responsiveness ends */
 
-    /* agency-reseller responsiveness ends */
+    /* agency-reseller responsiveness starts */
 
     .content-body .container-fluid .d-flex.justify-content-between.my-5 {
         flex-wrap: wrap;
@@ -259,10 +277,10 @@ body {
     .content-body .container-fluid .agency-stats {
         flex-direction: column;
         gap: 10px;
-         width: 100%;
+        width: 100%;
     }
 
-    .content-body .container-fluid  .agency-stats .agency-stat-box {
+    .content-body .container-fluid .agency-stats .agency-stat-box {
         width: 100%;
         height: auto;
         flex-direction: row-reverse;
@@ -270,7 +288,7 @@ body {
         padding: 20px 10px;
     }
 
-    .content-semi-head.mb-5 .d-flex{
+    .content-semi-head.mb-5 .d-flex {
         flex-wrap: wrap;
         gap: 10px;
         padding: 0;
@@ -281,40 +299,50 @@ body {
         gap: 10px;
     }
 
-    .custom-search-form.mr-3{
+    .custom-search-form.mr-3 {
         margin-right: 0 !important;
     }
 
-    .custom-search-form input{
+    .custom-search-form input {
         width: 100%;
         max-width: 300px;
         margin: 0;
     }
 
-  .table-teams {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    max-width: 300px;
-    width: 100%;
-  }
+    .table-teams {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        max-width: 300px;
+        width: 100%;
+    }
 
-  .table-teams thead,
-  .table-teams tbody,
-  .table-teams tr {
-    display: table;
-    width: max-content;
-    table-layout: auto;
-  }
+    .table-teams thead,
+    .table-teams tbody,
+    .table-teams tr {
+        display: table;
+        width: max-content;
+        table-layout: auto;
+    }
 
-  .table-teams th,
-  .table-teams td {
-    white-space: nowrap;
-  }
+    .table-teams th,
+    .table-teams td {
+        white-space: nowrap;
+    }
 
     /* agency-reseller responsiveness ends */
 
+    /* all-video responsiveness starts */
+
+ 
+
+    /* all-video responsiveness ends */
+
+     .video-wrap-inner {
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
 
     /* video output responsiveness starts */
 
