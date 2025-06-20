@@ -3,23 +3,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const navMenu = document.querySelector(".nav-top");
     const sideMenu = document.querySelector(".sidebar");
 
-  // Creating the toggle buttons
+    // Creating the toggle buttons
     const toggleBtn = document.createElement("div");
     toggleBtn.className = "nav-toggle";
     toggleBtn.innerHTML = "&#9776;";
 
     const toggleBtnSide = document.createElement("div");
     toggleBtnSide.className = "side-toggle";
-    toggleBtnSide.innerHTML = `<div><img src="assets/images/vclawd-Logo.png" alt="logo"></div>&#9660;`
+    // Detect path depth
+    const pathDepth = window.location.pathname.split("/").filter(Boolean).length;
+    const pathPrefix = "../".repeat(pathDepth);
+
+    toggleBtnSide.innerHTML = `
+       <div><img src="${pathPrefix}assets/images/vclawd-Logo.png" alt="logo"></div>&#9660;
+    `;
 
     // Inserting the nav toggle button into the header before nav
     if (contentHead && navMenu) {
         contentHead.insertBefore(toggleBtn, navMenu);
     }
 
-       // Inserting the side toggle button into the header before nav
+    // Inserting the side toggle button into the header before nav
     if (contentHead && sideMenu) {
-         contentHead.insertBefore(toggleBtnSide, navMenu);
+        contentHead.insertBefore(toggleBtnSide, navMenu);
     }
 
 
@@ -28,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         navMenu.classList.toggle("active");
     });
 
-      // Toggle side menu on click
+    // Toggle side menu on click
     toggleBtnSide.addEventListener("click", function () {
         sideMenu.classList.toggle("active");
     });

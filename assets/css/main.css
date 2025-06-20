@@ -181,9 +181,6 @@
     margin: 1rem 0;
 }
 
-.btn-facebook-sign-in,
-.btn-google-sign-in {}
-
 .btn-facebook-sign-in {
     background-color: rgb(24 119 242);
     color: #fff;
@@ -279,10 +276,6 @@
 
 .sidebar .nav-item:last-child {
     margin-bottom: 5rem;
-}
-
-.sidebar .nav {
-    /* margin-bottom: 2rem; */
 }
 
 .sidebar .nav-link {
@@ -938,8 +931,6 @@
     height: calc(2.8rem + 2px) !important;
     border-radius: 0.5rem;
 }
-
-.btn-delete-settings {}
 
 .team-type-stat {
     display: flex;
@@ -1636,8 +1627,6 @@
     color: #fff;
 }
 
-    {}
-
 .help_video {
     /* height: 321px !important; */
     aspect-ratio: 16/9;
@@ -1777,13 +1766,6 @@
 
 .custom-search-form input::placeholder {
     color: #d45af4;
-}
-
-
-
-
-.custom-check-label {
-    /* position: relative; */
 }
 
 .custom-check-label .check-mark {
@@ -4350,10 +4332,6 @@ input.clr-color {
     vertical-align: middle;
 }
 
-.table-engagement tbody {
-    /* background-color: #d840e5; */
-}
-
 .table-engagement tbody tr td {
     border: 2px solid #d840e5;
     font-size: 0.7rem;
@@ -4864,7 +4842,6 @@ p.guide {
 
 input[type=range] {
     -webkit-appearance: none;
-    /* margin: 18px 0; */
     width: 100%;
 }
 
@@ -5907,8 +5884,6 @@ input[type=range]:focus::-ms-fill-upper {
     padding: 0 0.5rem;
 }
 
-.media-desc-head .vid-dur {}
-
 .btn-invite-team {
     padding: 0.4rem 0.75rem;
     margin-bottom: 1rem;
@@ -5968,8 +5943,6 @@ input[type=range]:focus::-ms-fill-upper {
     margin-left: -15px;
     margin-bottom: 1.5rem;
 }
-
-.account-card-wrap {}
 
 .account-img-wrap {
     width: 80px;
@@ -6098,8 +6071,6 @@ input[type=range]:focus::-ms-fill-upper {
     margin-bottom: 2rem;
     margin-top: auto;
 }
-
-.no-data .btn-submit {}
 
 .modal-add-card {
     background-color: var(--color-primary);
@@ -6446,7 +6417,6 @@ a.related-videos-title {
     border: 2px solid #e15fff;
     padding: 1rem;
     border-radius: 0.4rem;
-    max-width: ;
 }
 
 .light-icon {
@@ -6664,8 +6634,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     font-size: 1rem;
 }
 
-.featured_box .title {}
-
 .featured_content {
     border: 2px solid #eb75ca;
     padding: 1.5rem;
@@ -6701,10 +6669,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-right: 1rem;
     min-width: 150px;
 
-}
-
-.channel_name_input {
-    /* width: 600px; */
 }
 
 .logo_input_box {
@@ -6794,8 +6758,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .channel_logo_table {
     height: 80px;
 }
-
-.channel_table_action {}
 
 .channel_table_action .nav-link {
     color: #fff;
@@ -6919,8 +6881,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #fff;
     border-radius: 1.1rem;
 }
-
-.countdown-display {}
 
 .rolls-ad-outter .countdown_wrap {
     position: static;
@@ -7713,7 +7673,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 }
 
 .show-entries-input {
-    margin-right: ;
     color: #fff;
     display: flex;
     align-items: center;
@@ -7924,10 +7883,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     max-width: unset;
 }
 
-.video-as-playlist .video-display-page .video_content {
-    /* border: none !important; */
-}
-
 .playlist-head {
     background-color: inherit;
     padding: 0.2rem 0.5rem 1rem 0.5rem;
@@ -8009,10 +7964,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     font-size: 1.3rem;
 }
 
-.course-page-header .description {
-    /* max-width: 60%; */
-}
-
 .course-video-page-content {
     display: flex;
     height: 530px;
@@ -8049,8 +8000,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-color: #d840e5;
     border-radius: 1rem;
 }
-
-.course-video-page-content .playlist_wrap::-webkit-scrollbar-button {}
 
 .course-video-page-content .playlist_wrap::-webkit-scrollbar-thumb {
     background-color: #fff;
@@ -8482,8 +8431,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-right: 1rem;
 }
 
-.generated-subtitle-wrap {}
-
 .generated-item {
     margin-bottom: 1rem;
 }
@@ -8493,8 +8440,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     font-size: 1.1rem;
     font-weight: 400;
 }
-
-.generated-item .label {}
 
 .generated-item .generated-inner {
     display: flex;
