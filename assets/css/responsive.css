@@ -1,3 +1,55 @@
+body{
+    width: 100%;
+    max-width: 1600px;
+}
+
+.side-toggle{
+    display: none;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+@media (max-width: 1355px) {
+
+.side-toggle {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    position: fixed;
+    top: 10px;
+    z-index: 10000;
+    left: 10px;
+  }
+
+  .side-toggle div img{
+    width: 150px;
+    height: auto;
+  }
+
+.sidebar {
+    display: none;
+    position: fixed;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar a.logo-link img{
+    display: none;
+  }
+
+  .sidebar.active {
+    display: flex;
+  }
+
+}
+
 @media (max-width: 1100px) {
 
 .video-display-page{
@@ -19,8 +71,9 @@
 }
 
 
-@media (max-width: 862px) {
-  .nav-toggle {
+@media (max-width: 1271px) {
+
+.nav-toggle {
     display: block;
     cursor: pointer;
     margin-left: auto;
@@ -28,6 +81,7 @@
     color: #fff;
     font-size: 1.8rem;
   }
+
 
   .nav-top {
     display: none;
@@ -64,7 +118,10 @@
   }
 }
 
-@media (max-width: 700px) {
+
+@media (max-width: 740px) {
+
+/* video output responsiveness starts */
 
 .countdown-wrap .countdown-header-text {
     font-size: 16px;
@@ -195,6 +252,88 @@ flex-wrap: wrap;
       flex-wrap: wrap;
     justify-content: center;
 }
+
+/* video output responsiveness ends */
+
+/* dashboard responsiveness starts */
+#particles-js{
+    height: 100%;
+    min-height: 550px;
+}
+
+.welcome-inner{
+    flex-direction: column;
+    gap: 20px;
+    padding: 4rem 20px 1rem 20px;
+    align-items: center;
+    align-items: center;
+}
+
+.welcome-area {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-wrap .greeting {
+ text-align: center;
+}
+
+.welcome-wrap .desc {
+    text-align: center;
+}
+
+.welcome-wrap .quick-nav {
+    margin-left: 0;
+}
+
+.app-stat {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.app-stat .stat-item {
+    width: 100%;
+    display: flex;
+   flex-wrap: wrap;
+   justify-content:start;
+   align-items: center;
+   gap: 20px;
+   padding: 20px;
+}
+
+.app-stat .stat-item:not(:last-child) {
+    margin-right: 0;
+}
+
+.stat-item .icon {
+    width: 2.5rem;
+    margin-right: 0;
+}
+
+.stat-item .stat-content {
+    flex-direction: row-reverse;
+    gap: 5px;
+}
+
+.stat-content .val {
+    align-self: none;
+    margin-bottom: 0;
+}
+
+.snippet-head{
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.row .col-3 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+/* dashboard responsiveness ends */
 
 }
 
