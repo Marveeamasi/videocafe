@@ -11,6 +11,9 @@ body {
     display: none;
 }
 
+
+    /* analytics responsiveness end */
+
 @media (max-width: 1355px) {
 
     .side-toggle {
@@ -67,8 +70,59 @@ body {
         width: 100%;
         max-width: 100%;
     }
+}
+
+@media (max-width: 1060px) {
+       .content-body .container-fluid .tab-content#pills-tabContent{
+  overflow-x: scroll;
+  white-space: nowrap; 
+  -webkit-overflow-scrolling: touch;
+  width: 900px;
+      } 
+
+        .content-body .container-fluid .tab-content#pills-tabContent> *{
+      width: 100%;
+      } 
+      
+        .tab-pane#pills-integration .vc-import-wrap .illus--image-wrap{
+       display: none;
+      }
 
 }
+
+@media (max-width: 900px) {
+       .content-body .container-fluid .tab-content#pills-tabContent{
+  overflow-x: scroll;
+  white-space: nowrap; 
+  -webkit-overflow-scrolling: touch;
+  width: 500px;
+      } 
+}
+
+@media (max-width: 600px) {
+       .content-body .container-fluid .tab-content#pills-tabContent{
+  overflow-x: scroll;
+  white-space: nowrap; 
+  -webkit-overflow-scrolling: touch;
+  width: 300px;
+      } 
+
+      .tab-pane#pills-integration .vc-import-wrap .vc-import-form--wrap .form-group.d-flex.align-items-center{
+        flex-direction: column;
+        align-items: center;
+      }
+
+         .tab-pane#pills-integration .vc-import-wrap .vc-import-form--wrap .form-group.d-flex.align-items-center textarea{
+        width: 100%;
+      }
+
+    .vc-import-wrap .fake-wrap {
+    width: 100%;
+    margin-left: 0;
+}
+
+}
+
 
 
 @media (max-width: 1271px) {
