@@ -121,6 +121,22 @@ body {
     margin-left: 0;
 }
 
+.billing-data-wrap{
+    overflow-x: scroll;
+  white-space: nowrap; 
+  -webkit-overflow-scrolling: touch;
+  width: 300px;
+}
+
+.billing-data-wrap> *{
+   width: 100%;
+}
+
+.payment_history-wrap{
+    width: fit-content;
+
+}
+
 }
 
 
