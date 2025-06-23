@@ -142,7 +142,7 @@ body {
     margin: 0px;
 }
 
-.featured_content .row .col-4{
+.row .col-4{
     flex: 0 0 100% !important;
    max-width: 100% !important;
    margin-bottom: 10px;
