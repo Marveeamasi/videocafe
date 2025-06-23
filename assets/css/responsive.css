@@ -70,7 +70,38 @@ body {
         display: flex;
     }
 
-    
+    /* courses-page responsiveness end */
+
+     /* email responsiveness end */
+
+    .email-header {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.email-header .actions-wrap {
+    display: flex;
+    margin-left: auto;flex-wrap: wrap;
+    gap: 10px;
+}
+
+.primary-section .d-flex.align-items-center{
+    flex-wrap: wrap;
+}
+
+.content-body > .container-fluid{
+     overflow-x: scroll;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        width: 900px;
+}
+
+.content-body > .container-fluid > *{
+    width: 100%;
+}
+
+ /* email  responsiveness end */
+
 
 }
 
@@ -239,6 +270,15 @@ body {
 
   /* course video page content end */
 
+  /* email responsiveness start */ 
+
+  .content-body > .container-fluid{
+        width: 600px;
+}
+
+/* email responsiveness end */ 
+
+
 }
 
 @media (max-width: 900px) {
@@ -289,65 +329,6 @@ body {
     }
 
     /* channels-settings starts */
-}
-
-@media (max-width: 600px) {
-    .content-body .container-fluid .tab-content#pills-tabContent {
-        overflow-x: scroll;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        width: 300px;
-    }
-
-    .tab-pane#pills-integration .vc-import-wrap .vc-import-form--wrap .form-group.d-flex.align-items-center {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tab-pane#pills-integration .vc-import-wrap .vc-import-form--wrap .form-group.d-flex.align-items-center textarea {
-        width: 100%;
-    }
-
-    .vc-import-wrap .fake-wrap {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .billing-data-wrap {
-        overflow-x: scroll;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        width: 300px;
-    }
-
-    .billing-data-wrap>* {
-        width: 100%;
-    }
-
-    .payment_history-wrap {
-        width: fit-content;
-
-    }
-
-    /* courses-page rssponsiveness starts */
-
-    .video-settings-box.course-page-outter{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.relatedvideos-item {
-    flex-direction: column;
-}
-
-.relatedvideos-item > *{
-width: 100%;
-}
-
-
-/* courses-page rssponsiveness end */
-
 }
 
 @media (max-width: 740px) {
@@ -545,12 +526,6 @@ width: 100%;
 
     /* agency-reseller responsiveness ends */
 
-    /* all-video responsiveness starts */
-
-
-
-    /* all-video responsiveness ends */
-
     .video-wrap-inner {
         flex-direction: column;
         flex-wrap: wrap;
@@ -695,6 +670,73 @@ width: 100%;
     }
 
     /* video output responsiveness ends */
+
+      /* email responsiveness start */ 
+
+  .content-body > .container-fluid{
+        width: 350px;
+}
+
+/* email responsiveness end */ 
+
+}
+
+@media (max-width: 600px) {
+    .content-body .container-fluid .tab-content#pills-tabContent {
+        overflow-x: scroll;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        width: 300px;
+    }
+
+    .tab-pane#pills-integration .vc-import-wrap .vc-import-form--wrap .form-group.d-flex.align-items-center {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-pane#pills-integration .vc-import-wrap .vc-import-form--wrap .form-group.d-flex.align-items-center textarea {
+        width: 100%;
+    }
+
+    .vc-import-wrap .fake-wrap {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .billing-data-wrap {
+        overflow-x: scroll;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        width: 300px;
+    }
+
+    .billing-data-wrap>* {
+        width: 100%;
+    }
+
+    .payment_history-wrap {
+        width: fit-content;
+
+    }
+
+    /* courses-page rssponsiveness starts */
+
+    .video-settings-box.course-page-outter{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.relatedvideos-item {
+    flex-direction: column;
+}
+
+.relatedvideos-item > *{
+width: 100%;
+}
+
+
+/* courses-page rssponsiveness end */
 
 }
 
