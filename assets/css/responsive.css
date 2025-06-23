@@ -278,6 +278,43 @@ body {
 
 /* email responsiveness end */ 
 
+/* experimentation responsiveness  start */
+
+.experimentation-item {
+    padding: 10px;;
+}
+
+.experimentation-item .row{
+    padding: 10px !important;
+}
+
+.experiment-heading {
+   flex-direction: column;
+   gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.experiment-heading .left-section{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.experiment-video-item .experiment-video-head{
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding-right: 0px;
+}
+
+.experiment-video-head .overall-stat{
+    margin-left: 0px;
+}
+
+/* experimentation responsiveness  end*/
+
 
 }
 
