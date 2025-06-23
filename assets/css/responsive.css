@@ -199,6 +199,29 @@ body {
 }
 
     /* channels reponsiveness ends */
+
+/* forgot pwd responsiiveness start */
+
+.sign-up-inner{
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-inner .left-section {
+    display: none;
+}
+
+.sign-up-inner .right-section {
+    margin: auto;
+ border-radius: 1rem;
+ padding: 3rem 1rem;
+ width: 100%;
+ max-width: 500px;
+}
+
+/* forgot pwd responsiiveness end */
+
+
 }
 
 @media (max-width: 1100px) {
@@ -774,6 +797,42 @@ width: 100%;
 
 
 /* courses-page rssponsiveness end */
+
+/* forgot  pwd responsiveness start */
+
+.sign-up-inner .right-section form{
+   width: 100%;
+   min-width: none;
+   max-width: none;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+}
+
+.sign-up-inner .right-section form .title{
+ text-align: center;
+}
+
+.sign-up-inner .right-section form div{
+display: flex;
+flex-direction: column;
+gap: 10px;
+align-items: ;
+}
+
+.sign-up-inner .right-section form div label{
+ text-align: center;
+}
+
+.sign-up-inner .right-section form div input{
+ width: 300px;
+ max-width: none;
+ min-width: none;
+}
+
+
+/* forgot  pwd responsiveness end */
 
 }
 
