@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const contentHead = document.querySelector(".content-head");
     const navMenu = document.querySelector(".nav-top");
     const sideMenu = document.querySelector(".sidebar");
+    const sideMenuCourses = document.querySelector(".nav-landing-outter");
+    const logo = document.querySelector(".logo_output_link");
 
     // Creating the toggle buttons
     const toggleBtn = document.createElement("div");
@@ -18,6 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
        <div><img src="${pathPrefix}assets/images/vclawd-Logo.png" alt="logo"></div>&#9660;
     `;
 
+        const toggleBtnSideCourses = document.createElement("div");
+toggleBtnSideCourses.className = "side-toggle";
+    toggleBtnSideCourses.innerHTML = `
+       <div><img src="${pathPrefix}assets/images/vclawd-Logo.png" alt="logo"></div>&#9660;
+    `;
+
     // Inserting the nav toggle button into the header before nav
     if (contentHead && navMenu) {
         contentHead.insertBefore(toggleBtn, navMenu);
@@ -28,6 +36,28 @@ document.addEventListener("DOMContentLoaded", function () {
         contentHead.insertBefore(toggleBtnSide, navMenu);
     }
 
+     // Inserting the side toggle button into the header before nav
+    if (sideMenuCourses) {
+        contentHead.insertBefore(toggleBtnSideCourses, navMenu);
+    }
+
+window.addEventListener('resize', function () {
+    if (sideMenuCourses && logo && window.innerWidth < 1355) {
+        logo.style.display = 'none';
+        contentHead.insertBefore(toggleBtnSideCourses, navMenu);
+    }else{
+         logo.style.display = 'block';
+    }
+});
+
+window.onload = function () {
+      if (sideMenuCourses && logo && window.innerWidth < 1355) {
+        logo.style.display = 'none';
+        contentHead.insertBefore(toggleBtnSideCourses, navMenu);
+    }else{
+         logo.style.display = 'block';
+    }
+};
 
     // Toggle nav menu on click
     toggleBtn.addEventListener("click", function () {
@@ -38,6 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleBtnSide.addEventListener("click", function () {
         sideMenu.classList.toggle("active");
     });
+
+        // Toggle side menu courses on click
+    toggleBtnSideCourses.addEventListener("click", function () {
+        sideMenuCourses.classList.toggle("active");
+    });
+
 
 
     // Close nav if clicking outside
