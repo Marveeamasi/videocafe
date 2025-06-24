@@ -15,10 +15,6 @@ body {
     display: none;
 }
 
-.side-toggle-courses {
-    display: none;
-}
-
 @media (max-width: 1355px) {
 
     .side-toggle {
@@ -41,8 +37,8 @@ body {
     }
 
     .sidebar {
-        display: none;
-        position: fixed;
+        display: none !important;
+        position: fixed !important;
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
         z-index: 1000;
         transition: all 0.3s ease;
@@ -53,7 +49,7 @@ body {
     }
 
     .sidebar.active {
-        display: flex;
+        display: flex !important;
     }
 
     /* Courses-page  responsiveess starts */
@@ -102,10 +98,6 @@ body {
 
  /* email  responsiveness end */
 
- /* dashboard responsiveness start */
-
-    /* dashboard responsiveness ends */
-
 }
 
 @media (max-width: 1271px) {
@@ -125,20 +117,20 @@ body {
         position: fixed;
         top: 68.8px;
         right: 0;
-        width: 250px;
-        height: calc(100vh - 68.8px);
+        width: 250px !important;
+        height: calc(100vh - 68.8px) !important;
         background-color: #31164d;
         flex-direction: column;
         padding: 1rem;
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
         z-index: 1000;
         transition: all 0.3s ease;
-        justify-content: start;
-        align-items: start;
+        justify-content: start !important;
+        align-items: start !important;
     }
 
     .nav-top.active {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-top .nav-link {
@@ -189,7 +181,6 @@ body {
 .media-desc .box-actions {
     flex-direction: column;
     gap: 10px;
-    background: #000;
 
 }
 
@@ -274,6 +265,7 @@ body {
     .row .col-6 {
         flex: 0 0 100% !important;
         max-width: 100% !important;
+        padding-bottom: 10px;
     }
 
     /* all-video responsiveness ends */
@@ -306,6 +298,26 @@ body {
     }
 
 /* email responsiveness end */ 
+
+/* integration responsiveness start */
+.int-soc-box{
+    width: 100%;
+     max-width: 100%;
+ min-width: 100%;
+ height: 100% !important;
+}
+
+.int-soc-box .responder-inner{
+flex-wrap: wrap ;
+}
+
+.int-soc-box .responder-inner .responder-content{
+ white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* integration responsiveness ends */
 
 /* experimentation responsiveness  start */
 
@@ -747,6 +759,29 @@ body {
     }
 
 /* email responsiveness end */ 
+
+/* import video responsiveness starts */
+
+.container-fluid .vc-import-wrap{
+   flex-wrap: wrap;
+}
+
+/* import video responsiveness ends */
+
+/* landing-page responsiveness starts */
+
+.video-settings-box{
+    padding: 10px 0px !important;
+    border: none !important;
+}
+
+.uploaded-box{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+/* landing-page responsiveness ends */
 
 }
 
