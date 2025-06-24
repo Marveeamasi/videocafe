@@ -89,19 +89,11 @@ body {
     flex-wrap: wrap;
 }
 
-.content-body > .container-fluid{
-     overflow-x: scroll;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        width: 900px;
-}
-
-.content-body > .container-fluid > *{
-    width: 100%;
-}
-
  /* email  responsiveness end */
 
+ /* dashboard responsiveness start */
+
+    /* dashboard responsiveness ends */
 
 }
 
@@ -294,10 +286,6 @@ body {
   /* course video page content end */
 
   /* email responsiveness start */ 
-
-  .content-body > .container-fluid{
-        width: 600px;
-}
 
 /* email responsiveness end */ 
 
@@ -733,9 +721,6 @@ body {
 
       /* email responsiveness start */ 
 
-  .content-body > .container-fluid{
-        width: 350px;
-}
 
 /* email responsiveness end */ 
 
@@ -810,25 +795,54 @@ width: 100%;
    padding: 20px;
 }
 
-.sign-up-inner .right-section form .title{
+.sign-up-inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.sign-up-inner .right-section form{
+   width: 100%;
+   min-width: 100%;
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+}
+
+.sign-up-inner .right-section form div.title{
  text-align: center;
 }
 
-.sign-up-inner .right-section form div{
+.sign-up-inner .right-section form div.form-group{
 display: flex;
 flex-direction: column;
 gap: 10px;
-align-items: ;
+width: 100%;
+max-width: 100%;
+min-width: 100%;
 }
 
-.sign-up-inner .right-section form div label{
+.sign-up-inner .right-section form button{
+  width: 300px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.sign-up-inner .right-section form div.form-group label{
  text-align: center;
+ width: 300px;
+ max-width: 100%;
+ min-width: 100%;
+  margin: auto;
 }
 
-.sign-up-inner .right-section form div input{
+.sign-up-inner .right-section form div.form-group input{
  width: 300px;
- max-width: none;
- min-width: none;
+ max-width: 100%;
+ min-width: 100%;
+ margin: auto;
 }
 
 
@@ -849,5 +863,13 @@ align-items: ;
 }
 
     /* channels reponsiveness ends */
+
+    /* forgot password responsiveness starts */
+
+    .sign-up-inner .right-section form{
+   padding: 10px;
+}
+
+ /* forgot password responsiveness ends*/
 
 }
