@@ -872,6 +872,30 @@ min-width: 100%;
 
 /* forgot  pwd responsiveness end */
 
+/* help responsiveness starts */
+
+  .bg-helper{
+    min-width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+    .help_actions_wrap{
+flex-direction: column;
+gap: 10px;
+  }
+
+  .help_actions_wrap .btn-help_actions:first-child{
+margin-right: 0px;
+  }
+  
+  .row.justify-content-center .col-5{
+    flex: 0 0 100% !important;
+        max-width: 100% !important;
+  }
+
+/* help responsiveness ends */
+
 }
 
 @media (max-width: 400px) {
