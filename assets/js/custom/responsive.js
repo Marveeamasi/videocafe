@@ -84,4 +84,9 @@ window.onload = function () {
             sideMenu.classList.remove("active");
         }
     });
+
+    if (document.title === 'Emails') {
+  document.querySelector('.content-body .container-fluid')?.classList.add('overflow-horizontal');
+}
+
 });

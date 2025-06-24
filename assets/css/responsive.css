@@ -89,6 +89,17 @@ body {
     flex-wrap: wrap;
 }
 
+      .overflow-horizontal {
+        overflow-x: scroll;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        width: 1030px;
+    }
+
+    .overflow-horizontal>* {
+        width: 100%;
+    }
+
  /* email  responsiveness end */
 
  /* dashboard responsiveness start */
@@ -237,14 +248,14 @@ body {
 
 @media (max-width: 1060px) {
 
-    .content-body .container-fluid .tab-content#pills-tabContent {
+    .content-body .container-fluid .tab-content {
         overflow-x: scroll;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         width: 900px;
     }
 
-    .content-body .container-fluid .tab-content#pills-tabContent>* {
+    .content-body .container-fluid .tab-content>* {
         width: 100%;
     }
 
@@ -286,6 +297,13 @@ body {
   /* course video page content end */
 
   /* email responsiveness start */ 
+
+      .overflow-horizontal {
+        overflow-x: scroll;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        width: 900px;
+    }
 
 /* email responsiveness end */ 
 
@@ -330,7 +348,7 @@ body {
 }
 
 @media (max-width: 900px) {
-    .content-body .container-fluid .tab-content#pills-tabContent {
+    .content-body .container-fluid .tab-content {
         overflow-x: scroll;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
@@ -721,13 +739,19 @@ body {
 
       /* email responsiveness start */ 
 
+         .overflow-horizontal {
+        overflow-x: scroll;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        width: 330px;
+    }
 
 /* email responsiveness end */ 
 
 }
 
 @media (max-width: 600px) {
-    .content-body .container-fluid .tab-content#pills-tabContent {
+    .content-body .container-fluid .tab-content {
         overflow-x: scroll;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
