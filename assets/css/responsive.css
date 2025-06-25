@@ -27,7 +27,7 @@ body {
         font-size: 20px;
         position: fixed;
         top: 10px;
-        z-index: 10000;
+        z-index: 1000;
         left: 10px;
     }
 
@@ -215,6 +215,25 @@ body {
 
 /* forgot pwd responsiiveness end */
 
+/* record screen responsiveness starts */
+
+.container-fluid .flex--content-wrapper.mb-4{
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.step-item-main .step-content{
+     white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.navigation-box{
+    margin-right: 0px;
+}
+
+/* record screen responsiveness ends */
+
 
 }
 
@@ -253,6 +272,52 @@ body {
     .tab-pane#pills-integration .vc-import-wrap .illus--image-wrap {
         display: none;
     }
+
+    /* player settings responsveness starts */
+
+.player-settings-header{
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+
+.player-help-wrap p{
+    text-align: center;
+}
+
+.navigation-player-settings{
+    max-width: 350px;
+    width: 100%;
+}
+
+.player-settings-header .title{
+    text-align: center;
+}
+
+.player-settings-header .check-flex{
+    margin-left: 0px;
+}
+
+    .flex--content-wrapper{
+        flex-direction: column;
+        gap: 50px; 
+        align-items: center;
+    }
+
+     .flex--content-wrapper > *{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+    }
+
+    .navigation-box.navigation-player-settings{
+        margin-right: 0px !important;
+    }
+
+    /* player settings responsveness ends */
 
     /* all-video responsiveness starts */
 
@@ -488,6 +553,8 @@ flex-wrap: wrap ;
     .row .col-3 {
         flex: 0 0 100% !important;
         max-width: 100% !important;
+        padding-bottom: 50px;
+
     }
 
     /* dashboard responsiveness ends */
@@ -783,6 +850,33 @@ flex-wrap: wrap ;
 
 /* landing-page responsiveness ends */
 
+/* new experiment responsiveness starts */
+.extra-padding{
+    padding: 0px !important;
+}
+/* new experiment responsiveness ends */
+
+/* record screen responsiveness starts */
+
+.navigation-default{
+    background: transparent;
+}
+
+.bg-play-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+/* record screen responsiveness ends */
+
 }
 
 @media (max-width: 600px) {
@@ -931,6 +1025,94 @@ margin-right: 0px;
 
 /* help responsiveness ends */
 
+/* new experiment responsiveness starts */
+.video-file-select-input-wrap{
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.video-file-select-input-wrap> *{
+    width: 100%;
+}
+/* new experiment responsiveness ends */
+
+/* projects responsiveness starts */
+
+.vc-project-wrap{
+    flex-wrap: wrap;
+    min-height: 129px;
+    height: fit-content;
+}
+
+.new-project-modal--head{
+    flex-wrap: wrap;
+}
+
+/* projects responsiveness ends */
+
+/* record screen responsiveness starts */
+
+.navigation-box{
+   max-width: 320px;
+   width: 100%;
+}
+
+/* record screen responsiveness starts */
+
+.navigation-default{
+    background: transparent;
+}
+
+.bg-play-icon{
+    margin-top: 300px;
+}
+
+    .uploaded-box{
+        max-height: fit-content;
+    }
+    .loader img{
+        min-width: 380px;
+        width: 100%;
+    }
+/* record screen responsiveness ends */
+
+/* record video responsiveness starts */
+
+@keyframes stretch-in {
+    0% {
+        height: 415px;
+    }
+
+    25% {
+        height: 390px;
+    }
+
+    100% {
+        height: 250px;
+    }
+}
+
+@keyframes stretch-out-small {
+    to {
+      height: 600px;
+    }
+  }
+
+  .navigation-box[data-state="unwrapped"] {
+    animation: stretch-out-small 0.5s linear 1 forwards;
+  }
+
+  .nav.nav-pills{
+   justify-content: center;
+   gap: 10px;
+  }
+
+  .navigation-box .nav-pills .nav-item:not(:last-child) {
+    margin-right: 0px;
+  }
+
+/* record video responsiveness ends */
+
 }
 
 @media (max-width: 400px) {
@@ -954,5 +1136,13 @@ margin-right: 0px;
 }
 
  /* forgot password responsiveness ends*/
+
+ /* record screen responsiveness starts */
+
+    .uploaded-box{
+        width: 320px;
+    }
+
+/* record screen responsiveness ends */
 
 }
