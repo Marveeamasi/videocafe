@@ -89,4 +89,22 @@ window.onload = function () {
   document.querySelector('.content-body .container-fluid')?.classList.add('overflow-horizontal');
 }
 
+// manipulating teams pages
+   if (document.title === 'Team') {
+  document.querySelector('.flex--content-wrapper')?.classList.add('team-item');
+   document.querySelector('.tab-content')?.classList.add('teams');
+  
+}
+
+// manipulating tables to make it overflow-x
+   if (document.title === 'Text to Speech') {
+  const content = document.querySelector('.table-text--speech');
+
+const wrapper = document.createElement('div');
+wrapper.className = 'mobile-table-wrapper';
+content.parentNode.insertBefore(wrapper, content);
+wrapper.appendChild(content);
+  
+}
+
 });

@@ -133,6 +133,11 @@ body {
         display: flex !important;
     }
 
+    .nav-top .nav-link.active::after {
+    bottom: 0px;
+}
+
+
     .nav-top .nav-link {
         padding: 10px 0;
         font-size: 1.1rem;
@@ -266,6 +271,17 @@ body {
     }
 
     .content-body .container-fluid .tab-content>* {
+        width: 100%;
+    }
+
+       .content-body .container-fluid .tab-content.teams {
+        overflow-x: auto;
+        white-space: normal;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    .content-body .container-fluid .tab-content.teams>* {
         width: 100%;
     }
 
@@ -421,6 +437,28 @@ flex-wrap: wrap ;
 
 /* experimentation responsiveness  end*/
 
+/* team item responsiveness  start */
+
+.flex--content-wrapper.team-item{
+    flex-direction: column;
+}
+
+.flex--content-wrapper.team-item .team-main-section{
+flex-basis: 100%;
+flex-wrap: wrap;
+}
+
+.flex--content-wrapper.team-item .other-team-outter {
+    flex-basis: 100%;
+    margin-left: 0px;
+}
+
+.flex--content-wrapper.team-item .other-teams-wrap {
+    width: 100%;
+}
+
+
+/* team item responsiveness ends */
 
 }
 
@@ -430,6 +468,13 @@ flex-wrap: wrap ;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         width: 500px;
+    }
+
+         .content-body .container-fluid .tab-content.teams {
+        overflow-x: auto;
+        white-space: normal;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
     }
 
     /* channels-settings starts */
@@ -471,7 +516,8 @@ flex-wrap: wrap ;
         gap: 20px;
     }
 
-    /* channels-settings starts */
+    /* channels-settings ends */
+
 }
 
 @media (max-width: 740px) {
@@ -877,6 +923,35 @@ flex-wrap: wrap ;
 
 /* record screen responsiveness ends */
 
+/* text to speech responsiveness starts */
+
+.text-speech-field{
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-speech-field .sc-market-select{
+  width: 100%;
+}
+
+.text-speech-field .sc-market-select:not(:last-child){
+    margin-right: 0px;
+}
+
+.mobile-table-wrapper{
+     width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 500px;
+}
+
+.table-text--speech{
+    min-width: 700px;
+    width: 100%;
+}
+
+/* text to speech responsiveness ends */
+
 }
 
 @media (max-width: 600px) {
@@ -885,6 +960,13 @@ flex-wrap: wrap ;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         width: 300px;
+    }
+
+         .content-body .container-fluid .tab-content.teams {
+        overflow-x: auto;
+        white-space: normal;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
     }
 
     .tab-pane#pills-integration .vc-import-wrap .vc-import-form--wrap .form-group.d-flex.align-items-center {
@@ -1113,6 +1195,49 @@ margin-right: 0px;
 
 /* record video responsiveness ends */
 
+/* stock images responsiveness starts */
+
+.form-control.vc-form-input.w-25{
+    width: 100% !important;
+}
+
+.container-fluid .d-flex.flex-column.my-5{
+   gap: 10px;
+   align-items: center;
+}
+
+.d-flex.flex-column .page-heading{
+   text-align: center;
+}
+
+.d-flex.flex-column .page-desc{
+   text-align: center;
+}
+
+ /* stock images responsiveness ends */
+
+ /* teams responsiveness starts */
+
+ .team-stat-wrap{
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+ }
+
+ .team-stat-box {
+width: 100%;
+ }
+
+  /* teams responsiveness ends */
+
+  /*  text to speech resposnisiveness starts */
+
+  .mobile-table-wrapper{
+  max-width: 330px;
+}
+
+ /*  text to speech resposnisiveness ends */
+
 }
 
 @media (max-width: 400px) {
@@ -1128,6 +1253,14 @@ margin-right: 0px;
 }
 
     /* channels reponsiveness ends */
+
+      /*  text to speech resposnisiveness starts */
+
+  .mobile-table-wrapper{
+  max-width: 280px;
+}
+
+ /*  text to speech resposnisiveness ends */
 
     /* forgot password responsiveness starts */
 
