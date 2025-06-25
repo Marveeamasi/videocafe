@@ -239,7 +239,24 @@ body {
 
 /* record screen responsiveness ends */
 
+/* video editor responsiveness starts */
 
+ .row .col-8{
+    margin-bottom: 50px;
+        -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* video editor responsiveness ends */
+
+/* video item responsiveness starts */
+
+.vid-seetings-outter{
+    flex-direction: column;
+}
+/* video item responsiveness ends */
 }
 
 @media (max-width: 1100px) {
@@ -456,6 +473,15 @@ flex-wrap: wrap;
 .flex--content-wrapper.team-item .other-teams-wrap {
     width: 100%;
 }
+
+/* video editor responsiveness starts */
+
+ .content-semi-head{
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+/* video editor responsiveness ends */
 
 
 /* team item responsiveness ends */
@@ -952,6 +978,32 @@ flex-wrap: wrap;
 
 /* text to speech responsiveness ends */
 
+/* upload video responsiveness starts  */
+
+.bg-upload-wrap{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.bg-upload-wrap .right-section{
+    padding-right: 0px;
+}
+
+.bg-upload-wrap .left-section{
+    text-align: center;
+}
+
+.upload-illus{
+    max-width: 320px;
+    width: 100%;
+}
+
+/* upload video responsiveness ends */
+
 }
 
 @media (max-width: 600px) {
@@ -1237,6 +1289,13 @@ width: 100%;
 }
 
  /*  text to speech resposnisiveness ends */
+
+ /* video item responsiveness starts */
+.video-settings-head{
+    flex-wrap: wrap;
+    justify-content: start;
+}
+/* video item responsiveness ends */
 
 }
 
