@@ -1352,57 +1352,7 @@
     <script src="../assets/js/custom/player-settings.js"></script>
 
     <script>
-        // let selectedValues = [];
-
-        // // Toggle the dropdown visibility
-        // function toggleDropdown() {
-        //     const dropdownList = document.getElementById('dropdownList');
-        //     dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
-        // }
-
-        // // Select an option from the dropdown
-        // function selectOption(value) {
-        //     // Add value only if it is not already selected
-        //     if (!selectedValues.includes(value)) {
-        //         selectedValues.push(value);
-        //         displaySelected();
-        //     }
-        // }
-
-        // // Display selected values as tags and in the selected options div
-        // function displaySelected() {
-        //     const dropdownInput = document.querySelector('.dropdown-input');
-        //     dropdownInput.innerHTML = ''; // Clear input content
-
-        //     // Display each selected value as a tag inside the input
-        //     selectedValues.forEach(value => {
-        //         const tag = document.createElement('span');
-        //         tag.className = 'selected-item';
-        //         tag.innerHTML = `${value} <span class="remove-btn" onclick="removeOption('${value}')">x</span>`;
-        //         dropdownInput.appendChild(tag);
-        //     });
-
-        //     // If no options selected, show placeholder text
-        //     if (selectedValues.length === 0) {
-        //         dropdownInput.innerHTML = 'Select options...';
-        //     }
-        // }
-
-        // // Remove a selected option
-        // function removeOption(value) {
-        //     selectedValues = selectedValues.filter(item => item !== value);
-        //     displaySelected();
-        // }
-
-        // // Close dropdown if clicked outside
-        // document.addEventListener('click', function(event) {
-        //     const dropdownContainer = document.querySelector('.dropdown-container');
-        //     if (!dropdownContainer.contains(event.target)) {
-        //         document.getElementById('dropdownList').style.display = 'none';
-        //     }
-        // });
-
-        // Object to store selected values for each dropdown by ID
+       
         const selectedValuesMap = {};
 
         // Toggle the dropdown visibility
