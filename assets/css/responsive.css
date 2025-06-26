@@ -55,15 +55,18 @@ body {
     /* Courses-page  responsiveess starts */
 
     .nav-landing-outter {
-        display: none;
-        position: fixed;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-        transition: all 0.3s ease;
+        display: none !important;
+        position: fixed !important;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3) !important;
+        z-index: 1000 !important;
+        transition: all 0.3s ease !important;
+        width: fit-content !important;
+        justify-content: start !important;
+        left: 0px !important;
     }
 
     .nav-landing-outter.active {
-        display: flex;
+        display: flex !important;
     }
 
     /* courses-page responsiveness end */
@@ -419,10 +422,6 @@ flex-wrap: wrap ;
 
 /* experimentation responsiveness  start */
 
-.experimentation-item {
-    padding: 10px;;
-}
-
 .experimentation-item .row{
     padding: 10px !important;
 }
@@ -484,7 +483,14 @@ flex-wrap: wrap;
 /* video editor responsiveness ends */
 
 
-/* team item responsiveness ends */
+/* new experiment responsiveness starts */
+
+.experimentation-item{
+    border-radius: 0.5rem;
+    padding: 15px;
+}
+
+/* new experiment responsiveness ends */
 
 }
 
@@ -1228,7 +1234,7 @@ margin-right: 0px;
 
 @keyframes stretch-out-small {
     to {
-      height: 600px;
+      height: 700px;
     }
   }
 
@@ -1295,7 +1301,7 @@ width: 100%;
     flex-wrap: wrap;
     justify-content: start;
 }
-/* video item responsiveness ends */
+/* video item responsiveness ends *
 
 }
 

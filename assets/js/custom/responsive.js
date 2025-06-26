@@ -107,4 +107,15 @@ wrapper.appendChild(content);
   
 }
 
+// manipulating classname for course pages and avoid flex column for side bar
+//    if (document.title === 'Player') {
+//   const content = document.querySelector('.table-text--speech');
+
+// const wrapper = document.createElement('div');
+// wrapper.className = 'mobile-table-wrapper';
+// content.parentNode.insertBefore(wrapper, content);
+// wrapper.appendChild(content);
+  
+// }
+
 });
