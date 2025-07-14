@@ -30,6 +30,11 @@ body {
         z-index: 1000;
         left: 10px;
     }
+    @media(prefers-color-scheme: light){
+         .side-toggle {
+        color: #2F0643;
+    }
+    }
 
     .side-toggle div img {
         width: 150px;
@@ -114,6 +119,12 @@ body {
         font-size: 1.8rem;
     }
 
+    @media(prefers-color-scheme: light){
+          .nav-toggle {
+        color: #2F0643;
+    }
+    }
+
 
     .nav-top {
         display: none;
@@ -130,6 +141,12 @@ body {
         transition: all 0.3s ease;
         justify-content: start !important;
         align-items: start !important;
+    }
+
+    @media(prefers-color-scheme: light){
+        .nav-top{
+            background-color: white;
+        }
     }
 
     .nav-top.active {
@@ -1332,6 +1349,11 @@ width: 100%;
  /*  text to speech resposnisiveness ends */
 
     /* forgot password responsiveness starts */
+
+    .sign-up-inner .right-section{
+       border-radius: 0px;
+       border: none;
+    }
 
     .sign-up-inner .right-section form{
    padding: 10px;

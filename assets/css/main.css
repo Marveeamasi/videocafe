@@ -109,7 +109,15 @@
     align-items: center;
     flex-direction: column;
     padding: 3.1rem 3rem 3rem 5rem;
+}
 
+/* new update */
+@media (prefers-color-scheme: dark) {
+    .sign-up-inner .right-section {
+    background-color: #9b8dae;
+    color: white;
+    border: 2px solid #2c0640;
+}
 }
 
 .right-section form {
@@ -122,7 +130,13 @@
     font-weight: bold;
     font-size: 0.95rem;
     margin-bottom: 2rem;
+}
 
+/* new update */
+@media (prefers-color-scheme: dark){
+    .right-section .title {
+    color: white;
+}
 }
 
 .right-section .forgot-pwd-form .title {
@@ -135,6 +149,13 @@
     font-size: 1rem;
     color: #9b8dae;
     margin-bottom: 0.4rem
+}
+
+/* new update */
+@media(prefers-color-scheme: dark){
+   .right-section label {
+    color: white;
+}
 }
 
 .sign-up-inner .right-section .register-form .form-group {
@@ -198,6 +219,16 @@
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0.65rem 0.75rem;
+    /*  new update  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(prefers-color-scheme: dark){
+    .btn-google-sign-in {
+    background-color: transparent;
+}
 }
 
 .btn-facebook-sign-in img,
@@ -227,6 +258,13 @@
     padding: 0.55rem 1.2rem;
 }
 
+@media(prefers-color-scheme: dark){
+.sign-up-inner .right-section div a{
+    color: #261148 !important;
+    
+}
+}
+
 .flex-wrapper {
     display: flex;
     height: 100vh;
@@ -247,6 +285,12 @@
     position: relative;
 }
 
+/* new update */
+@media(prefers-color-scheme: light){
+    .content .content-body {
+    background-color: white;
+}
+}
 
 
 .content .content-head {
@@ -256,6 +300,14 @@
     align-items: center;
     padding: 0rem 0.8rem;
     min-height: 68.8px;
+}
+
+/* new update */
+@media(prefers-color-scheme: light){
+    .content .content-head {
+    background-color: white;
+    color: black;
+}
 }
 
 
@@ -268,6 +320,19 @@
     padding: 1rem 1.2rem 0rem 0.7rem;
     display: flex;
     flex-direction: column;
+}
+
+@media(prefers-color-scheme: light){
+    .sidebar{
+        background-color: white;
+    }
+}
+
+@media(prefers-color-scheme: light){
+    .sidebar {
+    background-color: white;
+    color: #000;
+}
 }
 
 .sidebar .nav-item {
@@ -286,8 +351,22 @@
     border-radius: 1.5rem;
 }
 
+@media(prefers-color-scheme: light)
+{
+    .sidebar .nav-link{
+        color: #261148;
+    }
+}
+
 .sidebar .nav-link.active {
     border: 1px solid #f3f1f6;
+}
+
+@media(prefers-color-scheme: light)
+{
+   .sidebar .nav-link.active{
+        color: #9b8dae;
+    }
 }
 
 .sidebar-icon {
@@ -303,7 +382,12 @@
 .collapse-icon::before {
     color: #fff;
     font-size: 0.6rem;
+}
 
+@media(prefers-color-scheme: light){
+    .collapse-icon::before {
+    color: #261148;
+}
 }
 
 .nav-top {
@@ -327,6 +411,12 @@
     padding: 0.1rem 0.9rem;
 }
 
+@media(prefers-color-scheme: light){
+    .nav-top .upload-dropdown {
+    color: #261148;
+}
+}
+
 .notification-icon {
     width: 1rem;
 }
@@ -336,6 +426,12 @@
     font-size: 1rem;
     position: relative;
     display: flex;
+}
+
+@media(prefers-color-scheme: light){
+   .nav-top .nav-link {
+    color: #261148;
+}
 }
 
 .nav-top .nav-link.active::after {
