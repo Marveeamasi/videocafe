@@ -444,12 +444,15 @@
     background-color: #2699fb;
     width: calc(100% - 2rem);
     position: absolute;
-    /* left: 50%;
-    
-    margin-left: -29px; */
     bottom: -17px;
     align-self: flex-end;
     justify-self: center;
+}
+
+@media(prefers-color-scheme: light){
+    .nav-top .nav-link.active::after {
+    background-color: #e15fff;
+}
 }
 
 .nav-secondary {
@@ -1661,6 +1664,13 @@
     padding: 0.5rem 2rem;
 }
 
+@media(prefers-color-scheme: light){
+    .btn-submit {
+    background: #28008A;
+    color: #fff;
+}
+}
+
 .btn-submit-sm {
     padding: 0.2rem 0.2rem !important;
 }
@@ -2487,6 +2497,14 @@
     font-size: 0.8rem;
 }
 
+@media(prefers-color-scheme: light){
+    #swap-modal .modal-content select,
+.vc-form-input {
+    border: 2px solid #00000010;
+    color: #000;
+}
+}
+
 .vc-form-input option {
     color: #000;
 }
@@ -2626,6 +2644,13 @@
     font-size: 0.9rem;
 }
 
+@media(prefers-color-scheme: light){
+    .vc-import-wrap label {
+    color: #000;
+}
+
+}
+
 .vc-import-wrap .form-group {
     margin-bottom: 2rem;
 }
@@ -2639,12 +2664,25 @@
     margin-left: auto;
 }
 
+@media(prefers-color-scheme: light){
+    .vc-import-wrap .form-control{
+        color: #000;
+        border: 2px solid #00000020;
+    }
+}
+
 .vc-import-wrap .illus--image-wrap img {
     width: 50%;
 }
 
 .vc-import-wrap .form-control::placeholder {
     color: #fff;
+}
+
+@media(prefers-color-scheme: light){
+    .vc-import-wrap .form-control::placeholder {
+    color: #28008A;
+}
 }
 
 .vc-import-wrap .fake-wrap {
@@ -3325,6 +3363,13 @@
     background-color: #66329e;
     color: #fff;
     font-size: 0.9rem;
+}
+
+@media(prefers-color-scheme: light){
+    .btn-submit {
+    background-color: #28008A;
+    color: #fff;
+}
 }
 
 .foot-el .sc-market-select {
@@ -4578,6 +4623,12 @@ input.clr-color {
     margin-bottom: 0.2rem;
 }
 
+@media(prefers-color-scheme: light){
+    .duration-wrap label {
+    color: #000;
+}
+}
+
 .vc-form-input-sm {
     height: 2.5rem !important;
 }
@@ -4596,6 +4647,14 @@ input.clr-color {
     padding: 0.4rem .75rem;
 }
 
+@media(prefers-color-scheme: light){
+    .table-analytics tr td {
+    border: 2px solid #00000010;
+    padding: 0.4rem .75rem;
+}
+
+}
+
 .nav-analytic {
     border: 2px solid #ac34bd;
     display: flex;
@@ -4605,22 +4664,42 @@ input.clr-color {
     align-items: center;
 }
 
+@media(prefers-color-scheme: light){
+   .nav-analytic {
+    border: none;
+    background: #F1F1F1;
+} 
+}
+
 .nav-analytic .nav-item {
     flex-grow: 1;
 }
 
 .nav-analytic .nav-link {
     color: #d840e5;
-    padding: 0rem 0.7rem;
+    padding: 0.5rem 0.7rem;
     border-radius: 0.7rem;
     font-size: 0.9rem;
     text-align: center;
+    font-weight: 500;
 }
 
 .nav-analytic .nav-link.active {
     color: #fff;
     background-color: transparent;
     border: 2px dashed #d840e5;
+}
+
+@media(prefers-color-scheme: light){
+    .nav-analytic .nav-link {
+    color: #28008A;
+}
+
+    .nav-analytic .nav-link.active {
+    color: #fff;
+    background-color: #28008A;
+    border: none;
+}
 }
 
 .check-sm .checkmark {
@@ -4639,6 +4718,12 @@ input.clr-color {
 .analytic-content {
     color: #fff;
     min-width: 180px;
+}
+
+@media(prefers-color-scheme: light){
+    .analytic-content {
+    color: #000;
+}
 }
 
 .analytic-content .analytic-title {
@@ -4685,6 +4770,17 @@ input.clr-color {
     background: #d840e5;
 }
 
+@media(prefers-color-scheme: light){
+       .nav-vid-proj .nav-link{
+        background: #cfcfcf;
+        color: #000;
+        font-weight: 500;
+    }
+    .nav-vid-proj .nav-link.active{
+        background: #28008A;
+    }
+}
+
 .analytic-tab-inner .title {
     color: #fff;
     font-size: 0.8rem;
@@ -4705,6 +4801,14 @@ input.clr-color {
     color: #fff;
     font-size: 0.9rem;
     padding: 0.55rem 0.75rem;
+}
+
+@media(prefers-color-scheme: light){
+    .table-vid-proj tr td {
+    border: none;
+    color: #000;
+    border-bottom: 1px solid #00000010;
+}
 }
 
 .table-vid-proj tr:first-child td {
@@ -6303,6 +6407,21 @@ input[type=range]:focus::-ms-fill-upper {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #000000;
+}
+
+@media(prefers-color-scheme: light){
+::-webkit-scrollbar-track {
+    background: #00000010;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00000050;
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00000080;
+}
 }
 
 .no-team-wrap {
