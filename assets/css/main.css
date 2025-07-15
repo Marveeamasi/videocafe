@@ -6587,6 +6587,12 @@ input[type=range]:focus::-ms-fill-upper {
     margin-top: auto;
 }
 
+@media(prefers-color-scheme: light){
+    .no-data .no-data-text {
+    color: #000;
+}
+}
+
 .modal-add-card {
     background-color: var(--color-primary);
     border-radius: 1.5rem;
@@ -6665,6 +6671,17 @@ input[type=range]:focus::-ms-fill-upper {
     border-bottom: 2px solid #e5e5e5;
 }
 
+@media(prefers-color-scheme: light){
+    .table-socio tr th{
+        color: #000;
+    }
+
+    .table-socio tr td {
+    color: #000;
+    border-bottom: 1px solid #00000010;
+}
+}
+
 .btn-card-action {
     background-color: transparent;
     color: #fff;
@@ -6687,7 +6704,6 @@ input[type=range]:focus::-ms-fill-upper {
     padding: 2rem;
     border-radius: 1.5rem;
     margin: 0 3rem;
-   
     margin-bottom: 3rem;
 }
 
@@ -6708,6 +6724,20 @@ input[type=range]:focus::-ms-fill-upper {
     color: #fff;
 }
 
+@media(prefers-color-scheme: light){
+.payment_history-wrap {
+    background-color: #f1f1f1;
+}
+.payment_history-wrap .title {
+    color: #28008A;
+}
+
+.payment_history-wrap table tr th,
+.payment_history-wrap table tr td {
+    color: #000;
+    border-bottom: 2px solid #00000030;
+}
+}
 
 #audio_visual {
     width: 100%;
