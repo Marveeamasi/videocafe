@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             logo.style.display = 'none';
             contentHead.insertBefore(toggleBtnSideCourses, navMenu);
         } else {
-            logo.style.display = 'block';
+           if(logo) logo.style.display = 'block';
         }
     };
 

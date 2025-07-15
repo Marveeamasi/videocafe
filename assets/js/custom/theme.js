@@ -16,13 +16,39 @@ function themedAsset(fileBase, ext = "png") {
 
 // === Swap the src of given image elements ===
 function updateThemeAssets() {
+  //for logo
   const logo = document.querySelector('.logo-link img');
-  if (!logo) {
-    console.warn('No logo found for .logo-link img');
-    return;
-  }
-  logo.src = themedAsset("vclawd-Logo", "png");
+ if(logo) logo.src = themedAsset("vclawd-Logo", "png");
   console.log('Updated logo to:', logo.src);
+
+  //for user drop down icons
+    const userDropIcons = document.querySelectorAll('img.user--dropdown-icon');
+    userDropIcons.forEach((img)=> {
+      currentSrc = img.getAttribute('src');
+      if(!currentSrc) return;
+    const parts = currentSrc.split('/');
+    const filename = parts.pop();
+    const dir = parts.join('/');
+    const [nameBase, ext] = filename.split('.');
+    const cleanBase = nameBase.replace('-light', '');
+    const themedName = isDark ? cleanBase : `${cleanBase}-light`;
+    img.src = `${dir}/${themedName}.${ext}`;
+    })
+
+    //for stat-item icons
+    const statIcons = document.querySelectorAll('.stat-item .icon');
+    statIcons.forEach((img)=> {
+      currentSrc = img.getAttribute('src');
+      if(!currentSrc) return;
+    const parts = currentSrc.split('/');
+    const filename = parts.pop();
+    const dir = parts.join('/');
+    const [nameBase, ext] = filename.split('.');
+    const cleanBase = nameBase.replace('-light', '');
+    const themedName = isDark ? cleanBase : `${cleanBase}-light`;
+    img.src = `${dir}/${themedName}.${ext}`;
+    })
+
 }
 
 // === Initial update ===
