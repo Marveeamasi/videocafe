@@ -2865,6 +2865,14 @@
     color: #fff;
 }
 
+@media(prefers-color-scheme: light){
+    .btn-cancel-delete{
+        color: #000;
+        background-color: #f1f1f1;
+        border: none;
+    }
+}
+
 .btn-cancel-delete,
 .btn-del-vid {
     padding: 0.35rem 1.6rem;
@@ -5205,6 +5213,7 @@ p.guide {
         align-items: center;
         background: #28008A;
         margin-top: 10px;
+        width: fit-content;
     }
 }
 
@@ -9160,12 +9169,28 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-bottom: 3rem;
 }
 
+@media(prefers-color-scheme: light){
+    .channels-wrap-outter {
+    background-color: transparent;
+   box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+}
+}
+
 .channel-link {
     color: #fff;
     text-decoration: none;
     font-size: 0.9rem;
     display: inline-block;
     margin-bottom: 2rem;
+}
+
+@media(prefers-color-scheme: light){
+    .channel-link{
+        color: #28008A;
+    }
+    .channel-link:hover{
+        color: #28008A !important;
+    }
 }
 
 .channel-link~.title {
