@@ -7223,13 +7223,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-bottom: 2rem;
 }
 
-@media(prefers-color-scheme: light){
-    .channels_item_box {
-    background-color:transparent;
-   box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
-}
-}
-
 .channels_items_box_inner {
     max-width: 900px;
 }
@@ -7273,7 +7266,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 @media(prefers-color-scheme: light){
 .logo_input_box .custom-file {
    border: none;
-   background: var(--color-primary);
 }
 }
 
@@ -7314,12 +7306,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-bottom: 2rem;
 }
 
-@media(prefers-color-scheme: light){
-    .channel_table_outter_wrap {
-    background-color: transparent;
-}
-}
-
 .channels_access_box {
     background-color: var(--color-primary);
     border-radius: 0.3rem;
@@ -7344,40 +7330,16 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     border-radius: 0.3rem !important;
 }
 
-@media(prefers-color-scheme: light){
-    .table_channels {
-    border: none;
-    box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
-    border-radius: 0.3rem !important;
-}
-}
-
 .table_channels tr td,
 .table_channels tr th {
     border: none !important;
     color: #fff;
 }
 
-@media(prefers-color-scheme: light){
-    .table_channels tr td,
-.table_channels tr th {
-    color: #000;
-}
-}
-
-
 .table_channels tr th {
     border-bottom: 2px solid #f74bec !important;
     padding: 0.4rem .75rem;
-}
 
-@media(prefers-color-scheme: light){
-.table_channels tr th {
-    border: none !important;
-    border-bottom: none !important;
-    background: #f1f1f1;
-    color: #000;
-}
 }
 
 .table_channels tr td {
@@ -7394,13 +7356,6 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-right: 0.5rem;
     border-radius: 0.3rem;
     padding: 0.25rem 0.75rem;
-}
-
-@media(prefers-color-scheme: light){
-    .channel_table_action .nav-link {
-    color: #28008A;
-    border: 2px solid #28008A;
-}
 }
 
 .privacy_message {
