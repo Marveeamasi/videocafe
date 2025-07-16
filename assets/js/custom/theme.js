@@ -9,20 +9,30 @@ const pathDepth = window.location.pathname.split("/").filter(Boolean).length;
 const pathPrefix = "../".repeat(pathDepth);
 
 // === Utility: Get full path for an asset based on theme ===
-function themedAsset(fileBase, ext = "png") {
+function themedAsset(fileBase,folder, ext = "png") {
   const themeSuffix = isDark ? "" : "-light";
-  return `${pathPrefix}assets/images/${fileBase}${themeSuffix}.${ext}`;
+  return `${pathPrefix}assets/${folder}/${fileBase}${themeSuffix}.${ext}`;
 }
 
 // === Swap the src of given image elements ===
 function updateThemeAssets() {
   //for logo
   const logo = document.querySelector('.logo-link img');
- if(logo) logo.src = themedAsset("vclawd-Logo", "png");
+ if(logo) logo.src = themedAsset("vclawd-Logo","images", "png");
 
-   //for logo
+   //for navlogo
   const navLogo = document.querySelector('.logo_output_link img');
- if(navLogo) navLogo.src = themedAsset("vclawd-Logo", "png");
+ if(navLogo) navLogo.src = themedAsset("vclawd-Logo","images", "png");
+
+ //for others
+  const imgs = document.querySelectorAll('img');
+  imgs.forEach((img)=> {
+       const imgSrc = img.getAttribute('src');
+  const splitmagePth = imgSrc.split('/');
+  const index = splitmagePth.length -1;
+  const imageName = splitmagePth[index];
+ if(imageName==='exclamation_cr.svg') img.src = themedAsset("exclamation_cr", "icons", "svg");
+  })
 
   //for user drop down icons
     const userDropIcons = document.querySelectorAll('img.user--dropdown-icon');

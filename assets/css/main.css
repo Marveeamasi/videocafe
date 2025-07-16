@@ -1782,6 +1782,13 @@
     transition: all 0.5s;
 }
 
+@media(prefers-color-scheme: light){
+    .btn-modal{
+        background: #28008A;
+        background-color: #28008A;
+    }
+}
+
 .btn-modal:active {
     border: 1px solid #fff;
     color: #fff;
@@ -1945,6 +1952,12 @@
     font-size: 1rem !important;
     padding: 0.7rem 2rem;
     background: linear-gradient(to right, #7d32e1 30%, #517be1) !important;
+}
+
+@media(prefers-color-scheme: light){
+    .btn-video-head{
+        background: #28008A !important;
+    }
 }
 
 .page-desc {
@@ -3738,6 +3751,13 @@
     border-radius: 0.4rem;
 }
 
+@media(prefers-color-scheme: light){
+    .purple-header{
+        background-color: white;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
+}
+
 .purple-wrap {
     background-color: #570880;
     border-radius: 0.6rem;
@@ -3768,6 +3788,12 @@
     font-size: 0.8rem;
 }
 
+@media(prefers-color-scheme: light){
+    .email-header .label{
+        color: #000;
+    }
+}
+
 .select-vid-name-input {
     min-width: 250px;
 }
@@ -3788,6 +3814,12 @@
     font-size: 0.8rem;
 }
 
+@media(prefers-color-scheme: light){
+    .alert-contact{
+        color: #000;
+    }
+}
+
 .alert-contact img {
     width: 0.7rem;
     margin-right: 0.2rem;
@@ -3800,6 +3832,17 @@
     border: 2px solid #d840e5;
 }
 
+@media(prefers-color-scheme: light){
+    .table-email thead th{
+        color: #000;
+        border: none;
+        background: #f1f1f1;
+    }
+    .table-email tbody td {
+    color: #000000;
+    border: none;
+}
+}
 
 .table-email thead th {
     font-size: 0.9rem;
@@ -8219,6 +8262,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-bottom: 3rem;
 }
 
+@media(prefers-color-scheme: light){
+    .experimentation-item{
+        background-color: transparent;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
+}
+
 .experiment-heading {
     display: flex;
     justify-content: space-between;
@@ -8227,10 +8277,22 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding-bottom: 1rem;
 }
 
+@media(prefers-color-scheme: light){
+    .experiment-heading{
+    border-bottom: 2px solid #00000020;
+    }
+}
+
 .experiment-heading .left-section .title {
     margin-bottom: 0.5rem;
     font-weight: 400 !important;
     font-size: 1rem !important;
+}
+
+@media(prefers-color-scheme: light){
+    .experiment-heading .left-section .title{
+        color: #000;
+    }
 }
 
 .experiment-heading .left-section .experiment-status {
@@ -8241,6 +8303,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     justify-content: center;
     border-radius: 1rem;
     color: #fff;
+}
+
+@media(prefers-color-scheme: light){
+    .experiment-heading .left-section .experiment-status{
+       color: #000; 
+       background: #f1f1f1;
+    }
 }
 
 .experiment-heading .left-section .experiment-status .status-icon {
@@ -8254,6 +8323,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     text-align: center;
 }
 
+@media(prefers-color-scheme: light){
+    .experiment-heading .mid-section{
+        color: #000;
+    }
+}
+
 .experiment-heading .right-section .vc-vid-actions {
     margin-bottom: 0 !important;
 }
@@ -8265,12 +8340,24 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     box-shadow: -1px 2px 6px #27242494;
 }
 
+@media(prefers-color-scheme: light){
+    .experiment-heading .right-section .vc-vid-actions button{
+        box-shadow: none;
+    }
+}
+
 .experiment-video-item .experiment-video-head {
     display: flex;
     color: #fff;
     padding-right: 3rem;
     margin-bottom: 0.5rem;
     max-width: 400px;
+}
+
+@media(prefers-color-scheme: light){
+    .experiment-video-item .experiment-video-head{
+        color: #000;
+    }
 }
 
 
@@ -8290,6 +8377,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 1.1rem;
 }
 
+@media(prefers-color-scheme: light){
+    .experiment-video-inner{
+        background-color: #f1f1f1;
+    }
+}
+
 .experiment-video-inner .experiment-video-preview {
     aspect-ratio: 16 / 9;
     border-radius: 0.5rem;
@@ -8304,10 +8397,22 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     text-decoration: none;
 }
 
+@media(prefers-color-scheme: light){
+    .experiment-video-inner .experimentation-link{
+        color: #000;
+    }
+}
+
 .experiment-video-inner .experiment-video-info {
     color: #fff;
     padding: 1.3rem 2rem 1.3rem 1.3rem;
     display: flex;
+}
+
+@media(prefers-color-scheme: light){
+    .experiment-video-inner .experiment-video-info{
+    color: #000;
+    }
 }
 
 .experiment-video-inner .experiment-video-info .experiment-created {
@@ -8318,6 +8423,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-color: #420661 !important;
     font-size: 0.9rem;
     line-height: 1.2rem;
+}
+
+@media(prefers-color-scheme: light){
+    .experiment-video-inner .vc-stat-box-wrap .vc-vid-stat-box{
+    background-color: #28008A !important;
+    color: white;
+    }
 }
 
 .experiment-video-inner .vc-stat-box-wrap .vc-vid-stat-box.winning,
@@ -8351,7 +8463,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 0.3rem;
     margin-bottom: 1rem;
     transition: all 0.5s;
+}
 
+@media(prefers-color-scheme: light){
+    .experiment-stat-2 .experiment-stat-item{
+        background-color: #28008A;
+    }
 }
 
 .experiment-stat-2 .experiment-stat-item:not(:last-child) {
@@ -8366,6 +8483,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-color: #9413e6;
     width: 100%;
     min-width: 12rem;
+}
+
+@media(prefers-color-scheme: light){
+.experiment-heading .right-section .vc-vid-actions .dropdown-menu{
+    background-color: #28008A;
+}
 }
 
 .experiment-input-wrap label {
@@ -9135,6 +9258,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 0.15rem 0.5rem;
     margin-bottom: 0.5rem;
     border-radius: 0.3rem;
+}
+
+@media(prefers-color-scheme: light){
+   .video-tag{
+      color: #28008A;
+          border: 2px solid #28008A;
+    }
 }
 
 .courses_page_outter .ql-editor {
