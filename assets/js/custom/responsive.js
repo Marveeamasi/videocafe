@@ -116,13 +116,4 @@ document.addEventListener("DOMContentLoaded", function () {
         content.parentNode.insertBefore(wrapper, content);
         wrapper.appendChild(content);
     }
-
-    // Uncomment if needed for Player
-    // if (document.title === 'Player') {
-    //     const content = document.querySelector('.table-text--speech');
-    //     const wrapper = document.createElement('div');
-    //     wrapper.className = 'mobile-table-wrapper';
-    //     content.parentNode.insertBefore(wrapper, content);
-    //     wrapper.appendChild(content);
-    // }
 });

@@ -19,7 +19,10 @@ function updateThemeAssets() {
   //for logo
   const logo = document.querySelector('.logo-link img');
  if(logo) logo.src = themedAsset("vclawd-Logo", "png");
-  console.log('Updated logo to:', logo.src);
+
+   //for logo
+  const navLogo = document.querySelector('.logo_output_link img');
+ if(navLogo) navLogo.src = themedAsset("vclawd-Logo", "png");
 
   //for user drop down icons
     const userDropIcons = document.querySelectorAll('img.user--dropdown-icon');

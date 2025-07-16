@@ -3975,6 +3975,14 @@
     position: relative;
 }
 
+@media(prefers-color-scheme: light){
+    .navigation-player-settings .nav-pills .nav-link {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+}
+}
+
 .navigation-player-settings .nav-pills .nav-link .icon-nav-wrap {
     height: 2.4rem;
     width: 2.4rem;
@@ -3985,6 +3993,13 @@
     justify-content: center;
     margin-right: 0.7rem;
     box-shadow: 0px 3px 5px #403c3c;
+}
+
+@media(prefers-color-scheme: light){
+    .navigation-player-settings .nav-pills .nav-link .icon-nav-wrap{
+        background-color: #28008A;
+        box-shadow: none;
+    }
 }
 
 .navigation-player-settings .nav-pills .nav-link .icon-nav-wrap img {
@@ -4003,6 +4018,12 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+}
+
+@media(prefers-color-scheme: light){
+    .active-indicator{
+        background-color: #28008A;
+    }
 }
 
 .active-indicator img {
@@ -4080,6 +4101,13 @@
     padding: 1.5rem;
     border: 2px solid #d840e5;
     border-radius: 0.4rem;
+}
+
+@media(prefers-color-scheme: light){
+    .video-settings-box{
+        border: none;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
 }
 
 .video-settings-box {
@@ -4368,6 +4396,16 @@ input.clr-color {
     border: 2px solid #fff;
     height: 20px;
     width: 20px;
+}
+
+@media(prefers-color-scheme: light){
+   .custom-check.light .checkmark::after {
+    border: solid #000;
+}
+
+.custom-check.light .checkmark {
+    border: 2px solid #000;
+}
 }
 
 .modal-select-vid .modal-content {
@@ -5057,6 +5095,12 @@ input.clr-color {
     font-size: 0.8rem;
 }
 
+@media(prefers-color-scheme: light){
+    .navigation-video-settings .collapse label{
+        color: #000;
+    }
+}
+
 
 .settings-uplooad img {
     width: 4rem;
@@ -5146,6 +5190,24 @@ p.guide {
     width: 300px;
 }
 
+@media(prefers-color-scheme: light){
+    .input-url-wrap input{
+        color: #28008A;
+        padding: 0;
+        background-color: #fff !important;
+        margin-top: 10px;
+    }
+
+    .icon-bg{
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #28008A;
+        margin-top: 10px;
+    }
+}
+
 .video-settings-box.light-mode .input-url-wrap input {
     color: var(--color-primary);
 }
@@ -5186,6 +5248,13 @@ p.guide {
     border-radius: 0.2rem;
 }
 
+@media(prefers-color-scheme: light){
+    .vid-inner-setting{
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
 .btn-edit-caption {
     color: #fff;
     font-size: 0.9rem;
@@ -5209,12 +5278,28 @@ p.guide {
     font-size: 0.9rem;
 }
 
+@media(prefers-color-scheme: light){
+    .vid-inner-setting label {
+        color: #000;
+    }
+}
+
 .vid-inner-setting textarea {
     background-color: #570880;
     color: #fff;
     font-size: 0.9rem;
     border: none;
     margin-bottom: 0.5rem;
+}
+
+@media(prefers-color-scheme: light){
+    .vid-inner-setting textarea{
+        background-color: #f1f1f1;
+    }
+
+     .vid-inner-setting textarea::placeholder{
+        color: #28008A !important;
+    }
 }
 
 .vid-inner-setting textarea::placeholder {
@@ -6935,6 +7020,12 @@ a.related-videos-title {
     display: inline-block;
 }
 
+@media(prefers-color-scheme: light){
+    a.related-videos-title{
+        color: #000 !important;
+    }
+}
+
 .related-videos-title {
     /* font-size: 1.6rem !important; */
     font-weight: 500 !important;
@@ -6953,9 +7044,11 @@ a.related-videos-title {
     font-size: 0.8rem;
 }
 
-/* .related-videos-username {
-    margin-bottom: 0.2rem;
-} */
+@media(prefers-color-scheme: light){
+    .related-videos-date{
+        color: #000;
+    }
+}
 
 .video_display_icon {
     margin-right: 0.5rem;
@@ -7040,6 +7133,12 @@ a.related-videos-title {
     color: var(--color-primary) !important;
 }
 
+@media(prefers-color-scheme: light){
+    .text-light{
+        color: #000 !important;
+    }
+}
+
 .video-settings-box.light-mode .custom-check.light .checkmark {
     border: 2px solid var(--color-primary);
 }
@@ -7048,7 +7147,7 @@ a.related-videos-title {
     border: solid var(--color-primary);
 }
 
-/* new colde */
+/* new code */
 
 .timeline-container {
     height: 7px;
@@ -7650,12 +7749,25 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     margin-bottom: 1rem;
 }
 
+@media(prefers-color-scheme: light){
+    .nav-landing-title{
+        color: #28008A;
+    }
+}
+
 .nav-landing-outter {
     background-color: #2d125b;
-    padding: 2rem 0.5rem 0.6rem 1rem;
+    /* new update */
+    padding: 2rem 0.2rem 0.6rem 0.2rem;
     height: calc(100vh - 72px) !important;
     overflow-y: scroll;
     min-width: 387px;
+}
+
+@media(prefers-color-scheme: light){
+    .nav-landing-outter {
+    background-color: white;
+}
 }
 
 .nav-landing-outter .navigation-box {
@@ -7669,6 +7781,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 0.2rem;
     border-radius: 0.5rem;
     font-size: 0.9rem;
+}
+
+@media(prefers-color-scheme: light){
+    .nav-landing-outter .form-control-file{
+        border: 2px solid #00000020;
+        color: #000;
+    }
 }
 
 .nav-landing-outter .btn-submit {
@@ -8643,6 +8762,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
+@media(prefers-color-scheme: light){
+    .ql-toolbar.ql-snow{
+       background-color: #28008A;
+    }
+}
+
 .ql-container.ql-snow {
     border-color: #d840e5;
     border-width: 2px;
@@ -8651,6 +8776,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 
 .ql-editor {
     color: #fff;
+}
+
+@media(prefers-color-scheme: light){
+    .ql-editor {
+    color: #000;
+}
+
 }
 
 .ql-snow .ql-fill,
@@ -8714,7 +8846,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-color: #570880;
     border-radius: 1rem;
     padding: 1rem;
+}
 
+@media(prefers-color-scheme: light){
+    .course-video-page-content .playlist_wrap{
+        background-color: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .course-page-outter {
@@ -8737,12 +8875,30 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     border-radius: 1rem;
 }
 
+@media(prefers-color-scheme: light){
+    .course-video-page-content .playlist_wrap::-webkit-scrollbar {
+    background-color: #fff;
+}
+
+.course-video-page-content .playlist_wrap::-webkit-scrollbar-thumb {
+    background-color: #28008A;
+}
+}
+
 .course-page-extra-content {
     background-color: #570880;
     border-radius: 1rem;
     padding: 1rem;
     min-height: 400px;
     color: #fff
+}
+
+@media(prefers-color-scheme: light){
+    .course-page-extra-content{
+        color: #000;
+        background-color: transparent;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
 }
 
 .course-page-extra-content .title {
