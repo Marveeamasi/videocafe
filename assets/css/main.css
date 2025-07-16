@@ -1814,6 +1814,14 @@
     margin-bottom: 5rem;
 }
 
+@media(prefers-color-scheme: light){
+    .bg-helper{
+        color: #000;
+        background-color: transparent;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
+}
+
 .help_title {
     font-size: 1.1rem;
 }
@@ -1836,6 +1844,13 @@
 .help_actions_wrap .btn-help_actions {
     background-color: #7354f0;
     color: #fff;
+}
+
+@media(prefers-color-scheme: light){
+    .help_actions_wrap .btn-help_actions{
+        color: white !important;
+        background-color: #28008A;
+    }
 }
 
 .help_actions_wrap .btn-help_actions:first-child {
@@ -1867,6 +1882,12 @@
 
 .help_video .controls {
     background-color: #570880;
+}
+
+@media(prefers-color-scheme: light){
+    .help_video .controls{
+        background-color: #28008A;
+    }
 }
 
 
