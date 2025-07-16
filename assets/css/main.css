@@ -59,7 +59,6 @@
 
 .sign-up-inner .left-section {
     background-color: #2f0643;
-    /* background: linear-gradient(to bottom, #570880, #190523); */
     width: 45%;
     position: relative;
     background-image: url("../../assets/icons/login\ image.svg");
@@ -70,7 +69,6 @@
     border-radius: 1rem 0 0 1rem;
     display: flex;
     flex-direction: column;
-
 }
 
 .left-section img {
@@ -256,6 +254,12 @@
     color: #fff;
     font-size: 1rem;
     padding: 0.55rem 1.2rem;
+}
+
+@media(prefers-color-scheme: light){
+    .btn-login {
+    background: #28008A;
+}
 }
 
 @media(prefers-color-scheme: dark){
@@ -1594,6 +1598,13 @@
     border-radius: 0 0 0.4rem 0.4rem;
 }
 
+@media(prefers-color-scheme: light){
+    .uploaded-box .media-desc {
+    background-color: #f1f1f1;
+    color: #000;
+}
+}
+
 .media-desc .title {
     font-size: 0.85rem;
     font-weight: bold;
@@ -1618,6 +1629,12 @@
     color: #fff;
     font-size: 0.9rem;
     padding: 0 !important;
+}
+
+@media(prefers-color-scheme: light){
+    .media-desc .box-actions .btn {
+    color: #000;
+}
 }
 
 .media-desc .box-actions .btn img {
@@ -1652,10 +1669,18 @@
 }
 
 .modal-content .btn-cancel {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     background-color: #c39ddb;
     color: #fff;
     padding: 0.5rem 2rem;
+}
+
+@media(prefers-color-scheme: light){
+    .modal-content .btn-cancel {
+    background-color: #f1f1f1;
+    color: #000;
+    font-weight: 500;
+}
 }
 
 .btn-submit {
@@ -7172,6 +7197,14 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 0.5rem 1rem;
 }
 
+@media(prefers-color-scheme: light){
+    .channel_nav_main {
+    background-color: transparent;
+ font-weight: 500;
+ border: 1px solid #00000010;
+}
+}
+
 .channel_nav_main .nav-item {
     margin-right: 2rem;
 
@@ -7188,6 +7221,20 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     background-color: transparent !important;
 }
 
+@media(prefers-color-scheme: light){
+    .channel_nav_main .nav-item .nav-link {
+    color: #000;
+}
+  .channel_nav_main .nav-item .nav-link:hover {
+    color: #000;
+  }
+.channel_nav_main .nav-item .nav-link.active {
+    border: none !important;
+    background-color: #f1f1f1 !important;
+    color: #000;
+}
+}
+
 .featured_box {
     margin-bottom: 2rem;
 }
@@ -7198,10 +7245,23 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     font-size: 1rem;
 }
 
+@media(prefers-color-scheme: light){
+    .featured_box .title{
+        color: #000;
+    }
+}
+
 .featured_content {
     border: 2px solid #eb75ca;
     padding: 1.5rem;
     border-radius: 0.5rem;
+}
+
+@media(prefers-color-scheme: light){
+    .featured_content {
+    border: none;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+}
 }
 
 .featured_preview_link {
@@ -7823,6 +7883,17 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     border: none;
     border-bottom: 2px dashed #fff;
     color: #fff;
+}
+
+.delte-input-test .form-control::placeholder {
+    color: #D740E5;
+}
+
+@media(prefers-color-scheme: light){
+    .delte-input-test .form-control{
+        border-bottom: 2px dashed #000;
+        color: #000;
+    }
 }
 
 .next_video_toast {
@@ -8737,7 +8808,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 0.5rem 10rem;
     display: flex;
     align-items: center;
+}
 
+@media(prefers-color-scheme: light){
+    .channel-header {
+    background-color: white;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+}
 }
 
 .channel-logo {
@@ -8754,7 +8831,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #fff;
     font-size: 1.1rem;
     font-weight: bold;
+}
 
+@media(prefers-color-scheme: light){
+    .channel-detail .channel-name {
+    color: #000;
+}
 }
 
 .channel-action {
@@ -8766,6 +8848,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #fff;
     width: 185px;
     border-radius: 0.5rem;
+}
+
+@media(prefers-color-scheme: light){
+    .channel-action .btn {
+    background: #28008A;
+}
 }
 
 .channel-action .btn:active {
@@ -8787,13 +8875,15 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     padding: 0.8rem 1rem;
 }
 
-/* .channel-about-head.about-head {
-    border-bottom: 1px solid #f74bec;
-} */
-
 .channel-about-head .title {
     color: #fff;
     font-size: 1.1rem;
+}
+
+@media(prefers-color-scheme: light){
+    .channel-about-head .title{
+        color: black;
+    }
 }
 
 .btn-edit-about {
@@ -8801,6 +8891,12 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #fff;
     border-radius: 0.3rem;
     padding: 0.35rem 0.7rem;
+}
+
+@media(prefers-color-scheme: light){
+    .btn-edit-about{
+        background-color: #28008A;
+    }
 }
 
 .btn-edit-about img {
@@ -8820,6 +8916,13 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     max-width: 300px;
 }
 
+@media(prefers-color-scheme: light){
+    .about-box{
+        background-color: #f1f1f1;
+        color: #000;
+    }
+}
+
 .about-box:hover {
     text-decoration: none;
 }
@@ -8833,13 +8936,31 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #fff;
 }
 
+@media(prefers-color-scheme: light){
+    .about-box .text {
+    color: #000;
+}
+}
+
 .modal-about-info .modal-content {
     background-color: var(--color-primary);
     padding: 1rem;
 }
 
+@media(prefers-color-scheme: light){
+    .modal-about-info .modal-content{
+        background: white;
+    }
+}
+
 .modal-about-info .title {
     color: #fff;
+}
+
+@media(prefers-color-scheme: light){
+    .modal-about-info .title{
+        color: #000;
+    }
 }
 
 .video-tag {
@@ -9180,6 +9301,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
 .courses_page_outter.light-mode .featured_box .channel_view_all {
     color: #333333;
 }
+
+
 
 .courses_page_outter.light-mode .media-desc .box-actions .btn {
     color: #333333;
