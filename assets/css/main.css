@@ -3215,6 +3215,13 @@
     border-radius: 0.8rem;
 }
 
+@media(prefers-color-scheme: light){
+    .audio-player-container{
+        background-color: #28008A;
+        border: none;
+    }
+}
+
 
 .play-icon {
     background-color: transparent;
@@ -3252,18 +3259,6 @@
     font-size: 0.8rem;
 }
 
-/* svg {
-    height: 25px !important;
-    width: 25px !important;
-    position: absolute;
-} */
-
-/* path {
-    stroke: #007db5;
-    fill: #fff;
-} */
-
-
 .pagination-bottom .page-link {
     border: 2px solid #d840e5;
     padding: 0.25rem 0.55rem;
@@ -3278,6 +3273,17 @@
     background-color: #d840e5 !important;
     color: #fff !important;
     border: 2px solid #d840e5;
+}
+
+@media(prefers-color-scheme: light){
+    .pagination-bottom .page-link {
+    border: 2px solid #28008A;
+    color: #28008A;
+}
+    .pagination-bottom .page-item.active .page-link{
+        background-color: #28008A !important;
+       border: 2px solid #28008A;
+    }
 }
 
 .pagination-bottom .page-item:not(:last-child) .page-link {
