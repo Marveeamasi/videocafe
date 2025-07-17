@@ -310,7 +310,9 @@
                                         <button class="btn btn-done-edit" data-target="#project-title">Submit</button>
                                     </div>
                                     <button class="btn no-shadow btn-edit-trigger" data-target="#project-title">
+                                        <span class="icon-bg">
                                         <img src="../assets/icons/new assets/pens.svg" alt="">
+                                        </span>
                                     </button>
                                 </div>
                                 <div class="page-desc">
@@ -844,54 +846,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"
         integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.0.0-beta.4/tsparticles.min.js"
-        integrity="sha512-ky74X8+71yWCCrWjOJKNn4/Ry684ZFhx0vRJEUWTbbtIbMmvLPNe6yF3S0UloA5/tFNJQ12Uls+nJUTKMRONYQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
     <script src="../assets/js/custom/chart.js"></script>
+    <script src="../assets/js/custom/theme.js"></script>
 <script src="../assets/js/custom/responsive.js"></script>
     <script src="../assets/js/custom/script.js"></script>
     <script src="../assets/js/select.js"></script>
 
     <script>
-        // function onDragStart(event) {
-        //     event
-        //         .dataTransfer
-        //         .setData('text/plain', event.target.id);
-
-        //         console.log("start");
-
-        //     // event
-        //     //     .currentTarget
-        //     //     .style
-        //     //     .backgroundColor = 'yellow';
-        // }
-
-        // function onDragOver(event) {
-        //     event.preventDefault();
-        //     console.log("yes");
-        // }
-
-        // function onDrop(event) {
-
-
-        //     console.log("dropped");
-        //     const id = event
-        //         .dataTransfer
-        //         .getData('text');
-
-
-
-        //     const draggableElement = document.getElementById(id);
-        //     const dropzone = event.target;
-        //     console.log(dropzone)
-        //     dropzone.appendChild(draggableElement);
-
-        //     event
-        //         .dataTransfer
-        //         .clearData();
-        // }
-
         var columns = document.querySelectorAll('.drag');
         var draggingClass = 'dragging';
         var dragSource;

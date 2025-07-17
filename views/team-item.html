@@ -317,7 +317,7 @@
                                                 <button class="btn btn-done-edit" data-target="#team-title">Submit</button>
                                             </div>
                                             <button class="btn no-shadow btn-edit-trigger" data-target="#team-title">
-                                                <img src="../assets/icons/new assets/pens.svg" alt="">
+                                                <span class="icon-bg"><img src="../assets/icons/new assets/pens.svg" alt=""></span>
                                             </button>
                                             <div class="team-type text-success text-danger">
                                                 🔓🔒 Private/Public
@@ -332,7 +332,7 @@
                                                 <button class="btn btn-done-edit" data-target="#team-desc">Submit</button>
                                             </div>
                                             <button class="btn no-shadow btn-edit-trigger" data-target="#team-desc">
-                                                <img src="../assets/icons/new assets/pens.svg" alt="">
+                                                <span class="icon-bg"><img src="../assets/icons/new assets/pens.svg" alt=""></span>
                                             </button>
                                         </div>
                                     </div>
@@ -345,28 +345,28 @@
                                     <a class="nav-link active" id="pills-project-tab" data-toggle="pill"
                                         href="#pills-project" role="tab" aria-controls="pills-project"
                                         aria-selected="true">
-                                        <img src="../assets/icons/project icon.svg" alt="project icon">
+                                       <!-- new update -->
                                         Project
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="pills-team-nav" data-toggle="pill" href="#pills-team"
                                         role="tab" aria-controls="pills-video" aria-selected="false">
-                                        <img src="../assets/icons/vidcloud/members.svg" alt="team icon">
+                                        <!-- new update -->
                                         Members
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="pills-team-nav" data-toggle="pill" href="#pills-invited"
                                         role="tab" aria-controls="pills-video" aria-selected="false">
-                                        <img src="../assets/icons/members icon.svg" alt="team icon">
+                                      <!-- new update -->
                                         Invited Team
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="pills-team-nav" data-toggle="pill" href="#pills-permission"
                                         role="tab" aria-controls="pills-video" aria-selected="false">
-                                        <img src="../assets/icons/vidcloud/permission.svg" alt="team icon">
+                                       <!-- new update -->
                                         Permission
                                     </a>
                                 </li>
@@ -374,7 +374,7 @@
                                     <a class="nav-link" id="pills-settings-nav" data-toggle="pill"
                                         href="#pills-settings" role="tab" aria-controls="pills-video"
                                         aria-selected="false">
-                                        <img src="../assets/icons/setting icon.svg" alt="settings icon">
+                                       <!-- new update -->
                                         Settings
                                     </a>
                                 </li>
@@ -456,13 +456,6 @@
                                         </div>
 
                                     </div>
-
-
-
-
-
-
-
 
                                 </div>
 
@@ -549,9 +542,6 @@
                                         </div>
                                     </div>
 
-
-
-
                                 </div>
                                 <div class="tab-pane fade" id="pills-invited" role="tabpanel"
                                     aria-labelledby="pills-default-tab">
@@ -609,14 +599,6 @@
                                                 </tbody>
                                             </table>
                                         </div>
-
-
-
-
-
-
-
-
 
                                         <div class="d-flex justify-content-end mt-auto">
                                             <div class="pagination-custom">
@@ -1057,8 +1039,6 @@
                                                 } else {
                                                     bag = bag.filter((val) => val != event.target.value);
                                                 }
-                                                // bag.push(event.target.value);
-                                                // console.log(bag.length);
                                                 if (bag.length > 0) {
                                                     valueDisplay.innerText = bag;
                                                 } else {
@@ -1068,12 +1048,6 @@
                                             })
                                         }
                                     }
-
-                                    // inputs.foreach((elem) => {
-                                    //     elem.on('change', (event) => {
-                                    //         console.log(event.target.value)
-                                    //     })
-                                    // })
                                 </script>
                                 <div class="tab-pane fade" id="pills-settings" role="tabpanel"
                                     aria-labelledby="pills-settings-tab">
@@ -1140,12 +1114,6 @@
 
         </section>
 
-
-
-
-
-
-
     </div>
 
     <div class="modal fade invite-team-modal" id="swap-modal" role="dialog">
@@ -1187,12 +1155,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"
         integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.0.0-beta.4/tsparticles.min.js"
-        integrity="sha512-ky74X8+71yWCCrWjOJKNn4/Ry684ZFhx0vRJEUWTbbtIbMmvLPNe6yF3S0UloA5/tFNJQ12Uls+nJUTKMRONYQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="../assets/js/select.js"></script>
 
     <script src="../assets/js/custom/chart.js"></script>
+         <script src="../assets/js/custom/theme.js"></script>
         <script src="../assets/js/custom/responsive.js"></script>
     <script src="../assets/js/custom/script.js"></script>
 
