@@ -2012,8 +2012,14 @@ background: #28008A;
     min-height: 340px;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     padding: 2rem 3rem 2rem 2rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .bg-upload-wrap{
+        background-color: #fff;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
 }
 
 .bg-helper {
@@ -2114,6 +2120,12 @@ background: #28008A;
     margin-bottom: 2rem;
 }
 
+@media (prefers-color-scheme: light) {
+    .upload-desc{
+        color: #000;
+    }
+}
+
 .upload-illus {
     width: 320px;
     margin-bottom: 0.5rem;
@@ -2123,6 +2135,12 @@ background: #28008A;
     font-size: 0.9rem;
     color: #fff;
     text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+    .desc{
+        color: #000;
+    }
 }
 
 
@@ -2153,6 +2171,12 @@ background: #28008A;
     color: #fff;
     padding: 0.6rem 5rem;
     border-radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .btn-upload{
+        background: #28008A;
+    }
 }
 
 .btn-upload input {
@@ -3328,11 +3352,24 @@ background: #28008A;
     text-align: center;
 }
 
+@media (prefers-color-scheme: light) {
+    .section-title{
+        color: #000;
+    }
+}
+
 .btn-upload-media {
     background-color: transparent;
     color: #d840e5;
     font-size: 1.1rem;
     border: 2px solid #d840e5;
+}
+
+@media (prefers-color-scheme: light) {
+    .btn-upload-media{
+        color: #28008A;
+         border: 2px solid #28008A;
+    }
 }
 
 .btn-upload-media img {
@@ -3350,6 +3387,12 @@ background: #28008A;
     border-radius: 0.5rem;
     overflow-x: hidden;
     margin-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .uploaded-media-wrap{
+        border: 2px solid #00000020;
+    }
 }
 
 .uploaded-media-wrap .inner-vid-wrap {
@@ -3380,8 +3423,6 @@ background: #28008A;
     font-size: 0.5rem;
 }
 
-
-
 .uploaded-media-actions {
     position: absolute;
     background-color: #d840e5;
@@ -3392,16 +3433,33 @@ background: #28008A;
     transition: all 0.5s;
 }
 
+@media (prefers-color-scheme: light) {
+   .uploaded-media-wrap .media-details {
+    color: #000000;
+}
+
+.uploaded-media-actions {
+    background-color: #28008A;
+}
+}
+
 .uploaded-media-wrap:hover .uploaded-media-actions {
     right: 15px;
 }
 
 .uploaded-media-actions .nav-link {
     padding: 0.35rem 0.2rem;
+    background-color: #d840e5;
 }
 
 .uploaded-media-actions .nav-link img {
     width: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .uploaded-media-actions .nav-link {
+     background-color: #28008A;
+}
 }
 
 .uploaded-videos-main {
@@ -3717,9 +3775,14 @@ background: #28008A;
     margin-bottom: 3rem;
     background-color: #570880;
     padding: 1.2rem 1.5rem 2rem 1.5rem;
-
-
     border-radius: 0.4rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .text-field-wrap{
+        background-color: #fff;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
 }
 
 .text-field-wrap .label,
@@ -3729,13 +3792,11 @@ background: #28008A;
     margin-bottom: 0.4rem;
 }
 
-/* .text-field-wrap .left-section {
-    margin-right: 2rem;
-} */
-
-/* .text-field-wrap .right-section {
-    flex-grow: 1;
-} */
+@media (prefers-color-scheme: light) {
+    .table-text--speech-wrap .label{
+        color: #000;
+    }
+}
 
 .text-field-wrap .right-section .text-field {
     background-color: #ad94cd;
@@ -3793,13 +3854,25 @@ background: #28008A;
     margin-right: 0.7rem;
 }
 
+@media (prefers-color-scheme: light) {
+    .btn-dwnld-speech{
+         border: 2px solid #28008A;
+    color: #28008A;
+    }
+}
+
 .btn-del-speech {
     background-color: #583381;
     padding: 0.4rem 0.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+@media (prefers-color-scheme: light) {
+    .btn-del-speech{
+        background-color: #28008A;
+    }
 }
 
 .btn-del-speech img {
@@ -3822,10 +3895,11 @@ background: #28008A;
     font-size: 0.9rem;
 }
 
-/* 
-.table-text--speech-wrap {
-    max-width: 750px;
-} */
+@media (prefers-color-scheme: light) {
+    .table-text--speech thead tr th, .table-text--speech tbody tr td {
+    color: #000;
+    }
+}
 
 .text-speech-field {
     display: flex;
@@ -3839,7 +3913,6 @@ background: #28008A;
     display: block;
     padding: 0.7rem 1.3rem;
     background-color: #9413e6;
-
 }
 
 .text-speech-field .select-items {
@@ -3849,6 +3922,20 @@ background: #28008A;
 
 .text-speech-field .select-selected {
     background-color: #9413e6;
+}
+
+@media (prefers-color-scheme: light) {
+    .text-speech-field .sc-market-select{
+        background-color: #f1f1f1;
+    }
+
+    .text-speech-field .select-items {
+    background-color: #fff;
+}
+
+.text-speech-field .select-selected {
+    background-color: #f1f1f1;
+}
 }
 
 .text-speech-field .select-selected::after {
@@ -3870,10 +3957,23 @@ background: #28008A;
     font-size: 0.9rem;
 }
 
+@media (prefers-color-scheme: light) {
+    .text-speech-labels .label{
+        color: black;
+    }
+}
+
 .table-text--speech-wrap {
     border: 2px solid #e15fff;
     padding: 1.5rem;
     border-radius: 0.4rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .table-text--speech-wrap{
+        border: none;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
 }
 
 .vn-container .controls .progress,
@@ -4908,7 +5008,7 @@ input.clr-color {
 
 @media(prefers-color-scheme: light){
     .project-item .desc-project{
-        color: #28008a;
+        color: #28008A;
     }
 }
 
@@ -5041,6 +5141,12 @@ input.clr-color {
     align-items: center;
     color: #fff;
     border-radius: 0.3rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .team-stat-box{
+        background-color: #28008A;
+    }
 }
 
 .team-stat-box .value {
@@ -5336,6 +5442,13 @@ input.clr-color {
     .nav-vid-proj .nav-link.active{
         background: #28008A;
     }
+    .nav-team .nav-link{
+        background: #f1f1f1;
+        color: #000;
+    }
+    .nav-team .nav-link.active{
+        background: #28008A;
+    }
 }
 
 .analytic-tab-inner .title {
@@ -5481,6 +5594,32 @@ input.clr-color {
     font-size: 0.9rem;
     border: 2px solid #d840e5;
     padding: 0 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .team-member-box {
+    background-color: #f1f1f1;
+}
+
+.team-member-box .member-count {
+    background-color: #28008A;
+}
+
+.team-member-box .team-name,
+.team-created {
+    color: #000;
+}
+
+.team-member-box .btn-team-box {
+    color: #28008A;
+    border: 2px solid #28008A;
+}
+.team-create{
+    background-color: #28008A;
+}
+.team-create .desc{
+    color: white !important;
+}
 }
 
 .letter-icon,
@@ -7059,6 +7198,12 @@ input[type=range]:focus::-ms-fill-upper {
     color: #fff;
 }
 
+@media (prefers-color-scheme: light) {
+    .no-team-wrap p {
+    color: #000;
+}
+}
+
 .no-team-wrap p {
     font-size: 1.1rem;
 }
@@ -7150,6 +7295,13 @@ input[type=range]:focus::-ms-fill-upper {
     color: #fff;
 }
 
+@media (prefers-color-scheme: light) {
+    .plan-upgrade-box{
+        background-color: #fff;
+        color: #000;
+    }
+}
+
 .plan-upgrade-box .card-title {
     font-size: 1.3rem;
     font-weight: 500;
@@ -7166,6 +7318,12 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 1.2rem;
     padding: 0.4rem 1.5rem;
     border-radius: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .plan-upgrade-box .btn-upgrade-plan{
+        background-color: #28008A;
+    }
 }
 
 .plan-upgrade-box .billing-price {
@@ -7777,6 +7935,18 @@ audio::-webkit-media-controls-rewind-button,
 audio::-webkit-media-controls-return-to-realtime-button,
 audio::-webkit-media-controls-toggle-closed-captions-button {
     color: #fff;
+}
+
+
+@media (prefers-color-scheme: light) {
+    .text--speech-audio::-webkit-media-controls-panel {
+    background-color: #f1f1f1;
+}
+
+.text--speech-audio::-webkit-media-controls-current-time-display,
+.text--speech-audio::-webkit-media-controls-time-remaining-display{
+    color: #000;
+}
 }
 
 .play-area {

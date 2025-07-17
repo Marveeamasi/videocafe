@@ -73,6 +73,10 @@ imgs.forEach((img) => {
   if (imageName === 'team icon.svg' && parentHasTransparentBg(parent)) {
     img.src = themedAsset("team icon", "icons", "", "svg");
   }
+
+   if (imageName === 'download thumbnail.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("download thumbnail", "icons", "", "svg");
+  }
 });
 
 
