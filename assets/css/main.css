@@ -1922,11 +1922,15 @@ background: #28008A;
 }
 
 #screen-select-modal .modal-content {
-    /* min-height: 500px;
-    min-width: 600px; */
     height: 500px;
     background-color: #60098e;
     padding: 1.4rem 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+    #screen-select-modal .modal-content{
+        background-color: #fff;
+    }
 }
 
 .btn-close-modal {
@@ -1945,6 +1949,12 @@ background: #28008A;
     color: #fff;
 }
 
+@media (prefers-color-scheme: light) {
+    #screen-select-modal .header{
+        color: #000;
+    }
+}
+
 #screen-select-modal .header .title {
     font-size: 1rem;
     margin-bottom: 0.8rem;
@@ -1960,7 +1970,6 @@ background: #28008A;
     padding: 0.2rem 0.75rem;
 }
 
-
 #screen-select-modal .nav-tab-wrap .nav-link.active {
     background-color: transparent !important;
     border: 2px solid #d840e5;
@@ -1971,6 +1980,21 @@ background: #28008A;
     border: 2px solid #d840e5;
     min-height: 300px;
     padding: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+    #screen-select-modal .nav-tab-wrap .nav-link{
+        color: #000;
+    }
+
+    #screen-select-modal .nav-tab-wrap .nav-link.active {
+    border: 2px solid #00000020;
+}
+
+
+    #screen-select-modal #pills-tabContent {
+    border: 2px solid #00000020;
+}
 }
 
 #pills-tabContent .tab-inner {
@@ -2493,13 +2517,21 @@ background: #28008A;
     min-width: 8.5rem;
 }
 
+/* new update */
+.vc-vid-actions .dropdown-menu>*,
+.vc-dropdown .dropdown-menu>* {
+    background-color: #570880;
+}
+
 @media(prefers-color-scheme: light){
-    .vc-dropdown .dropdown-menu{
+    .vc-dropdown .dropdown-menu,     .vc-vid-actions .dropdown-menu{
         background-color: #28008A;
     }
-    .vc-vid-actions .dropdown-menu{
-        background-color: #D740E5;
-    }
+
+    .vc-vid-actions .dropdown-menu>*,
+.vc-dropdown .dropdown-menu>* {
+    background-color: #28008A;
+}
 }
 
 .vc-vid-actions .dropdown-menu a,
@@ -3436,6 +3468,7 @@ background: #28008A;
 @media (prefers-color-scheme: light) {
    .uploaded-media-wrap .media-details {
     color: #000000;
+    font-weight: 500;
 }
 
 .uploaded-media-actions {
@@ -4653,10 +4686,17 @@ background: #28008A;
     padding: 0.075rem .75rem;
 }
 
+
 .clr-field input:focus {
     background-color: transparent;
     box-shadow: none;
     color: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+    .clr-field input, .clr-field input:focus{
+        color: #000;
+    }
 }
 
 .clr-field button {
@@ -4901,6 +4941,12 @@ input.clr-color {
 .anim-select,
 .vid-select-input {
     color: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+    .vid-select-input{
+        color: #000;
+    }
 }
 
 .modal-select-vid .new-project-modal--head {
@@ -5696,6 +5742,12 @@ input.clr-color {
     margin-bottom: 1rem;
 }
 
+@media (prefers-color-scheme: light) {
+    .settings-desc{
+        color: #000;
+    }
+}
+
 .navigation-video-settings .collapse .checkmark {
     height: 20px;
     width: 20px;
@@ -5721,7 +5773,7 @@ input.clr-color {
 }
 
 @media(prefers-color-scheme: light){
-    .navigation-video-settings .collapse label{
+    .navigation-video-settings .collapse label, .navigation-video-settings .collapse .label{
         color: #000;
     }
 }
@@ -5860,6 +5912,12 @@ p.guide {
     font-size: 0.9rem;
 }
 
+@media (prefers-color-scheme: light) {
+    .btn-copy{
+        color: #000;
+    }
+}
+
 .video-settings-box.light-mode .btn-copy {
     color: var(--color-primary);
 }
@@ -5906,6 +5964,10 @@ p.guide {
 }
 
 @media(prefers-color-scheme: light){
+    .editted-text {
+    color: #28008A;
+}
+
     .vid-inner-setting label {
         color: #000;
     }
@@ -7639,6 +7701,13 @@ input:checked+.slider:before {
     max-width: 500px;
 }
 
+@media (prefers-color-scheme: light) {
+    .video-display-page .video_content, .video-display-page .playlist_wrap{
+        border: none;
+        box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
+}
+
 .relatedvideos-item {
     display: flex;
     align-items: center;
@@ -7705,7 +7774,7 @@ a.related-videos-title {
 }
 
 @media(prefers-color-scheme: light){
-    .related-videos-date{
+    .related-videos-date, .related-videos-username{
         color: #000;
     }
 }
@@ -8812,6 +8881,12 @@ color: #000;
     display: flex;
 }
 
+@media (prefers-color-scheme: light) {
+    .video_output_title, .view_et_description_wrap{
+        color: #000;
+    }
+}
+
 .view_et_description_wrap .video_output_views {
     margin-right: 1rem;
     text-wrap: nowrap;
@@ -8837,6 +8912,12 @@ color: #000;
     color: #fff;
 }
 
+@media (prefers-color-scheme: light) {
+    .video_output_user{
+        color: #000;
+    }
+}
+
 .video_output_user .video_output_user_icon {
     width: 1.5rem;
 }
@@ -8852,6 +8933,12 @@ color: #000;
     align-items: center;
     color: #fff;
     margin-right: 0.7rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .video_output_reaction .video_output_reaction_item{
+        color: #000;
+    }
 }
 
 .video_output_reaction .video_output_reaction_item .btn-reaction {
@@ -8901,6 +8988,12 @@ color: #000;
     background-color: transparent;
     display: flex;
     align-items: center;
+}
+
+@media (prefers-color-scheme: light) {
+    .video_output_export .btn-video-export{
+        color: #000;
+    }
 }
 
 .experimentation-item {
@@ -9565,6 +9658,13 @@ color: #000;
     height: 100%;
 }
 
+@media (prefers-color-scheme: light) {
+    .video-as-playlist .video-display-page {
+        background-color: #fff;
+    }
+}
+
+
 .video-as-playlist .video-display-page .playlist_wrap {
     max-height: 100%;
     max-width: unset;
@@ -9578,6 +9678,13 @@ color: #000;
     color: #fff;
     border-bottom: 1px solid #fff;
     margin-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .playlist-head{
+        color: #000;
+        border-bottom: 1px solid #00000020;
+    }
 }
 
 .playlist-head .playlist-stat {
@@ -10102,6 +10209,12 @@ color: #000;
     color: #fff;
 }
 
+@media (prefers-color-scheme: light) {
+    .comment-inner .comment-top{
+         color: #000;
+    }
+}
+
 .comment-inner .comment-top *:not(span) {
     margin-right: 1rem;
 }
@@ -10116,6 +10229,12 @@ color: #000;
 .comment-inner .comment-text {
     padding: 1rem;
     color: #fff;
+}
+
+@media (prefers-color-scheme:light ) {
+    .comment-inner .comment-text{
+        color: #000;
+    }
 }
 
 .comment-top .comment-time {
@@ -10135,6 +10254,12 @@ color: #000;
     margin-left: auto;
     font-size: 0.85rem;
     transition: all 0.5s;
+}
+
+@media (prefers-color-scheme: light) {
+    .btn-delete-comment{
+        color: #000;
+    }
 }
 
 .btn-delete-comment:hover {
@@ -10440,6 +10565,12 @@ color: #000;
 .table-chan-sel thead tr th {
     color: #fff;
     font-size: 0.8rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .table-chan-sel thead tr th{
+        color: #000;
+    }
 }
 
 .table-chan-sel tr th,

@@ -408,6 +408,10 @@ body {
   margin-top: 3000px;
 }
 
+.course-page-header.no-margin-top{
+    margin-top: 2rem;
+}
+
   /* course video page content end */
 
   /* email responsiveness start */ 

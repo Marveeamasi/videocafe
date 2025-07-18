@@ -77,8 +77,15 @@ imgs.forEach((img) => {
    if (imageName === 'download thumbnail.svg' && parentHasTransparentBg(parent)) {
     img.src = themedAsset("download thumbnail", "icons", "", "svg");
   }
-});
 
+    if (imageName === 'copy icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("copy icon", "icons", "", "svg");
+  }
+
+   if (imageName === 'share_2_u_sq.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("share_2_u_sq", "icons", "", "svg");
+  }
+});
 
 
   //for user drop down icons
