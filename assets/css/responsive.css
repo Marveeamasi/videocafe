@@ -30,10 +30,9 @@ body {
         z-index: 1000;
         left: 10px;
     }
-    @media(prefers-color-scheme: light){
-         .side-toggle {
+  
+        .toggle-light .side-toggle {
         color: #2F0643;
-    }
     }
 
     .side-toggle div img {
@@ -110,6 +109,10 @@ body {
 
 @media (max-width: 1271px) {
 
+    .user-dropdown .workspace-details {
+    text-align: left;
+    }
+
     .nav-toggle {
         display: block;
         cursor: pointer;
@@ -119,10 +122,8 @@ body {
         font-size: 1.8rem;
     }
 
-    @media(prefers-color-scheme: light){
-          .nav-toggle {
+         .toggle-light .nav-toggle {
         color: #2F0643;
-    }
     }
 
 
@@ -143,11 +144,9 @@ body {
         align-items: start !important;
     }
 
-    @media(prefers-color-scheme: light){
-        .nav-top{
+    .toggle-light .nav-top{
             background-color: white;
         }
-    }
 
     .nav-top.active {
         display: flex !important;

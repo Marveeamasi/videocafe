@@ -1,0 +1,11 @@
+       <!-- new update -->
+                                     <label for="theme-switch" id="theme-switch-parent" class="dropdown-item justify-content-between">
+                                        <span>
+                                        <img class="user--dropdown-icon" src="assets/icons/theme.svg" alt="">
+                                        <span id="theme">Dark Mode</span>
+                                        </span>
+                                         <label class="switch">
+                                                <input id="theme-switch" type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </label>

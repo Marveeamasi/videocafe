@@ -1,5 +1,18 @@
-// === Detect if system prefers dark mode ===
-let isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+// === Initial theme preference from localStorage or checkbox ===
+let isDark = localStorage.getItem('theme') === 'dark';
+
+// If no saved theme, fall back to checkbox (initial load)
+if (localStorage.getItem('theme') === null) {
+  isDark = document.getElementById('theme-switch').checked;
+}
+
+//check theme switch status, it is true initially by default
+console.log(document.getElementById('theme-switch').checked)
+
+//stop propagetion for theme dropdowm item when touched
+document.getElementById('theme-switch-parent').addEventListener('click', function(event){
+  event.stopPropagation();
+})
 
 console.log('Theme.js loaded ✅');
 console.log('Initial isDark:', isDark);
@@ -17,13 +30,10 @@ function themedAsset(fileBase,folder,subFolder, ext = "png") {
 
 // === Swap the src of given image elements ===
 function updateThemeAssets() {
-  //for logo
-  const logo = document.querySelector('.logo-link img');
- if(logo) logo.src = themedAsset("vclawd-Logo","images","", "png");
-
-   //for navlogo
-  const navLogo = document.querySelector('.logo_output_link img');
- if(navLogo) navLogo.src = themedAsset("vclawd-Logo","images","", "png");
+  applyThemeClass();
+  //dynamically update theme texts
+const themeText = document.getElementById('theme');
+themeText.innerText = isDark?'Dark Mood':'Light Mood';
 
  //for others
  const imgs = document.querySelectorAll('img');
@@ -50,10 +60,12 @@ imgs.forEach((img) => {
     );
   }
 
+   if (imageName === 'vclawd-Logo.png' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("vclawd-Logo", "images", "", "png");
+  }
   if (imageName === 'exclamation_cr.svg' && parentHasTransparentBg(parent)) {
     img.src = themedAsset("exclamation_cr", "icons", "", "svg");
   }
-
   if (imageName === 'lock.svg' && parentHasTransparentBg(parent)) {
     img.src = themedAsset("lock", "icons", "", "svg");
   }
@@ -84,6 +96,69 @@ imgs.forEach((img) => {
 
    if (imageName === 'share_2_u_sq.svg' && parentHasTransparentBg(parent)) {
     img.src = themedAsset("share_2_u_sq", "icons", "", "svg");
+  }
+
+    if (imageName === 'dash icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("dash icon", "icons", "", "svg");
+  }
+
+   if (imageName === 'live icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("live icon", "icons", "", "svg");
+  }
+
+    if (imageName === 'record scren icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("record scren icon", "icons", "", "svg");
+  }
+
+   if (imageName === 'video-camera.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("video-camera", "icons", "", "svg");
+  }
+
+    if (imageName === 'project icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("project icon", "icons", "", "svg");
+  }
+
+   if (imageName === 'media icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("media icon", "icons", "", "svg");
+  }
+
+    if (imageName === 'email icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("email icon", "icons", "", "svg");
+  }
+
+   if (imageName === 'integration icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("integration icon", "icons", "", "svg");
+  }
+
+    if (imageName === 'setting icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("setting icon", "icons", "", "svg");
+  }
+
+   if (imageName === 'agency icons.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("agency icons", "icons", "", "svg");
+  }
+
+    if (imageName === 'help icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("help icon", "icons", "", "svg");
+  }
+
+   if (imageName === 'bonus icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("bonus icon", "icons", "", "svg");
+  }
+     if (imageName === 'video to gif.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("video to gif", "icons", "", "svg");
+  }
+
+   if (imageName === 'analysis icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("analysis icon", "icons", "", "svg");
+  }
+
+    if (imageName === 'notification bell.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("notification bell", "icons", "", "svg");
+  }
+
+   if (imageName === 'move icon.svg' && parentHasTransparentBg(parent)) {
+    img.src = themedAsset("move icon", "icons", "", "svg");
   }
 });
 
@@ -118,11 +193,32 @@ imgs.forEach((img) => {
 
 }
 
-// === Real-time system theme changes
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-  isDark = e.matches;
+function applyThemeClass() {
+  document.body.classList.remove('toggle-light', 'toggle-dark');
+  document.body.classList.add(isDark ? 'toggle-dark' : 'toggle-light');
+}
+
+function handleThemeToggle() {
+  const themeSwitch = document.getElementById('theme-switch');
+  isDark = themeSwitch.checked;
+
+  // Save to localStorage
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+  applyThemeClass();
   updateThemeAssets();
-});
+}
+
+// === Listen to theme switch toggle
+document.getElementById('theme-switch').addEventListener('change', handleThemeToggle);
 
 // === Initial update ===
-document.addEventListener("DOMContentLoaded", updateThemeAssets);
+document.addEventListener("DOMContentLoaded", () => {
+  const themeSwitch = document.getElementById('theme-switch');
+  
+  // Set checkbox state based on saved preference
+  themeSwitch.checked = isDark;
+
+  applyThemeClass();
+  updateThemeAssets();
+});
