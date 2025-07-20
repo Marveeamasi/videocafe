@@ -30,67 +30,81 @@ document.addEventListener("DOMContentLoaded", function () {
     if (contentHead && navMenu) {
         contentHead.insertBefore(toggleBtn, navMenu);
     }
-    if (contentHead && sideMenu) {
+    if (contentHead && sideMenu && navMenu) {
         contentHead.insertBefore(toggleBtnSide, navMenu);
     }
-    if (sideMenuCourses) {
+    if (contentHead && sideMenuCourses && navMenu) {
         contentHead.insertBefore(toggleBtnSideCourses, navMenu);
     }
 
     // === Resize and load handlers
     function handleResponsiveLogo() {
-        if (sideMenuCourses && logo && window.innerWidth < 1355) {
-            logo.style.display = 'none';
-            contentHead.insertBefore(toggleBtnSideCourses, navMenu);
-        } else {
-            if (logo) logo.style.display = 'block';
+        if (sideMenuCourses && logo && contentHead && navMenu) {
+            if (window.innerWidth < 1355) {
+                logo.style.display = 'none';
+                contentHead.insertBefore(toggleBtnSideCourses, navMenu);
+            } else {
+                logo.style.display = 'block';
+            }
         }
     }
 
     window.addEventListener('resize', handleResponsiveLogo);
-    window.onload = handleResponsiveLogo;
+    window.addEventListener('load', handleResponsiveLogo);
 
     // === Toggle click events
-    toggleBtn.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-    });
+    if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    }
 
-    toggleBtnSide.addEventListener("click", function () {
-        sideMenu.classList.toggle("active");
-    });
+    if (toggleBtnSide && sideMenu) {
+        toggleBtnSide.addEventListener("click", function () {
+            sideMenu.classList.toggle("active");
+        });
+    }
 
-    toggleBtnSideCourses.addEventListener("click", function () {
-        sideMenuCourses.classList.toggle("active");
-    });
+    if (toggleBtnSideCourses && sideMenuCourses) {
+        toggleBtnSideCourses.addEventListener("click", function () {
+            sideMenuCourses.classList.toggle("active");
+        });
+    }
 
     // === Close on outside click
     document.addEventListener("click", function (event) {
-        const isClickInside =
-            navMenu.contains(event.target) ||
-            toggleBtn.contains(event.target) ||
-            sideMenu.contains(event.target) ||
-            toggleBtnSide.contains(event.target);
-        if (!isClickInside) {
-            navMenu.classList.remove("active");
-            sideMenu.classList.remove("active");
+        const clickedInside =
+            (navMenu && navMenu.contains(event.target)) ||
+            (toggleBtn && toggleBtn.contains(event.target)) ||
+            (sideMenu && sideMenu.contains(event.target)) ||
+            (toggleBtnSide && toggleBtnSide.contains(event.target));
+
+        if (!clickedInside) {
+            if (navMenu) navMenu.classList.remove("active");
+            if (sideMenu) sideMenu.classList.remove("active");
         }
     });
 
     // === Page-specific tweaks
     if (document.title === 'Emails') {
-        document.querySelector('.content-body .container-fluid')?.classList.add('overflow-horizontal');
+        const container = document.querySelector('.content-body .container-fluid');
+        if (container) container.classList.add('overflow-horizontal');
     }
 
     if (document.title === 'Team') {
-        document.querySelector('.flex--content-wrapper')?.classList.add('team-item');
-        document.querySelector('.tab-content')?.classList.add('teams');
+        const wrapper = document.querySelector('.flex--content-wrapper');
+        const tabContent = document.querySelector('.tab-content');
+        if (wrapper) wrapper.classList.add('team-item');
+        if (tabContent) tabContent.classList.add('teams');
     }
 
     if (document.title === 'Text to Speech') {
         const content = document.querySelector('.table-text--speech');
-        const wrapper = document.createElement('div');
-        wrapper.className = 'mobile-table-wrapper';
-        content.parentNode.insertBefore(wrapper, content);
-        wrapper.appendChild(content);
+        if (content && content.parentNode) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'mobile-table-wrapper';
+            content.parentNode.insertBefore(wrapper, content);
+            wrapper.appendChild(content);
+        }
     }
 });

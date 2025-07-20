@@ -1,223 +1,163 @@
 // === Initial theme preference from localStorage or checkbox ===
 let isDark = localStorage.getItem('theme') === 'dark';
 
-// If no saved theme, fall back to checkbox (initial load)
-if (localStorage.getItem('theme') === null) {
-  isDark = document.getElementById('theme-switch').checked;
+const themeSwitchEl = document.getElementById('theme-switch');
+if (localStorage.getItem('theme') === null && themeSwitchEl) {
+  isDark = themeSwitchEl.checked;
 }
 
-//check theme switch status, it is true initially by default
-console.log(document.getElementById('theme-switch').checked)
-
-//stop propagetion for theme dropdowm item when touched
-document.getElementById('theme-switch-parent').addEventListener('click', function(event){
-  event.stopPropagation();
-})
+// Stop propagation for theme dropdown item when touched
+const themeCont = document.getElementById('theme-switch-parent');
+if (themeCont) {
+  themeCont.addEventListener('click', function (event) {
+    event.stopPropagation();
+  });
+}
 
 console.log('Theme.js loaded ✅');
 console.log('Initial isDark:', isDark);
 
-// === Determine path prefix based on how deep the current file is ===
+// === Detect path depth and build path prefix
 const pathDepth = window.location.pathname.split("/").filter(Boolean).length;
 const pathPrefix = "../".repeat(pathDepth);
 
 // === Utility: Get full path for an asset based on theme ===
-function themedAsset(fileBase,folder,subFolder, ext = "png") {
+function themedAsset(fileBase, folder, subFolder, ext = "png") {
   const themeSuffix = isDark ? "" : "-light";
   return `${pathPrefix}assets/${folder}${subFolder}/${fileBase}${themeSuffix}.${ext}`;
-  // if there is a subfolder add a stroke before it
 }
 
-// === Swap the src of given image elements ===
-function updateThemeAssets() {
-  applyThemeClass();
-  //dynamically update theme texts
-const themeText = document.getElementById('theme');
-themeText.innerText = isDark?'Dark Mood':'Light Mood';
-
- //for others
- const imgs = document.querySelectorAll('img');
-
-imgs.forEach((img) => {
-  const imgSrc = img.getAttribute('src');
-  const splitmagePth = imgSrc.split('/');
-  const index = splitmagePth.length - 1;
-  let imageName = splitmagePth[index];
-  imageName = imageName.replace('-light', ''); // Normalize
-
-  const parent = img.parentElement;
-
-  function parentHasTransparentBg(el) {
-    if (!el) return false;
-    const bg = getComputedStyle(el).backgroundColor;
-    return (
-      bg === 'transparent' ||
-      bg === 'white' ||
-      bg === '#fff' ||
-      bg === 'fffffff' ||
-      bg === 'rgba(0, 0, 0, 0)' ||
-      bg === 'inherit'
-    );
-  }
-
-   if (imageName === 'vclawd-Logo.png' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("vclawd-Logo", "images", "", "png");
-  }
-  if (imageName === 'exclamation_cr.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("exclamation_cr", "icons", "", "svg");
-  }
-  if (imageName === 'lock.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("lock", "icons", "", "svg");
-  }
-
-  if (imageName === 'search icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("search icon", "icons", "", "svg");
-  }
-
-  if (imageName === 'add icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("add icon", "icons", "", "svg");
-  }
-
-  if (imageName === 'delete_4.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("delete_4", "icons", "", "svg");
-  }
-
-  if (imageName === 'team icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("team icon", "icons", "", "svg");
-  }
-
-   if (imageName === 'download thumbnail.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("download thumbnail", "icons", "", "svg");
-  }
-
-    if (imageName === 'copy icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("copy icon", "icons", "", "svg");
-  }
-
-   if (imageName === 'share_2_u_sq.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("share_2_u_sq", "icons", "", "svg");
-  }
-
-    if (imageName === 'dash icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("dash icon", "icons", "", "svg");
-  }
-
-   if (imageName === 'live icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("live icon", "icons", "", "svg");
-  }
-
-    if (imageName === 'record scren icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("record scren icon", "icons", "", "svg");
-  }
-
-   if (imageName === 'video-camera.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("video-camera", "icons", "", "svg");
-  }
-
-    if (imageName === 'project icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("project icon", "icons", "", "svg");
-  }
-
-   if (imageName === 'media icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("media icon", "icons", "", "svg");
-  }
-
-    if (imageName === 'email icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("email icon", "icons", "", "svg");
-  }
-
-   if (imageName === 'integration icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("integration icon", "icons", "", "svg");
-  }
-
-    if (imageName === 'setting icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("setting icon", "icons", "", "svg");
-  }
-
-   if (imageName === 'agency icons.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("agency icons", "icons", "", "svg");
-  }
-
-    if (imageName === 'help icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("help icon", "icons", "", "svg");
-  }
-
-   if (imageName === 'bonus icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("bonus icon", "icons", "", "svg");
-  }
-     if (imageName === 'video to gif.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("video to gif", "icons", "", "svg");
-  }
-
-   if (imageName === 'analysis icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("analysis icon", "icons", "", "svg");
-  }
-
-    if (imageName === 'notification bell.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("notification bell", "icons", "", "svg");
-  }
-
-   if (imageName === 'move icon.svg' && parentHasTransparentBg(parent)) {
-    img.src = themedAsset("move icon", "icons", "", "svg");
-  }
-});
-
-
-  //for user drop down icons
-    const userDropIcons = document.querySelectorAll('img.user--dropdown-icon');
-    userDropIcons.forEach((img)=> {
-      currentSrc = img.getAttribute('src');
-      if(!currentSrc) return;
-    const parts = currentSrc.split('/');
-    const filename = parts.pop();
-    const dir = parts.join('/');
-    const [nameBase, ext] = filename.split('.');
-    const cleanBase = nameBase.replace('-light', '');
-    const themedName = isDark ? cleanBase : `${cleanBase}-light`;
-    img.src = `${dir}/${themedName}.${ext}`;
-    })
-
-    //for stat-item icons
-    const statIcons = document.querySelectorAll('.stat-item .icon');
-    statIcons.forEach((img)=> {
-      currentSrc = img.getAttribute('src');
-      if(!currentSrc) return;
-    const parts = currentSrc.split('/');
-    const filename = parts.pop();
-    const dir = parts.join('/');
-    const [nameBase, ext] = filename.split('.');
-    const cleanBase = nameBase.replace('-light', '');
-    const themedName = isDark ? cleanBase : `${cleanBase}-light`;
-    img.src = `${dir}/${themedName}.${ext}`;
-    })
-
-}
-
+// === Apply Theme Class to <body>
 function applyThemeClass() {
   document.body.classList.remove('toggle-light', 'toggle-dark');
   document.body.classList.add(isDark ? 'toggle-dark' : 'toggle-light');
 }
 
+// === Update assets based on theme
+function updateThemeAssets() {
+  applyThemeClass();
+
+  // Update dynamic theme text
+  const themeText = document.getElementById('theme');
+  if (themeText) {
+    themeText.innerText = isDark ? 'Dark Mood' : 'Light Mood';
+  }
+
+  const imgs = document.querySelectorAll('img');
+  imgs.forEach((img) => {
+    const imgSrc = img.getAttribute('src');
+    if (!imgSrc) return;
+
+    const splitmagePth = imgSrc.split('/');
+    const index = splitmagePth.length - 1;
+    let imageName = splitmagePth[index];
+    imageName = imageName.replace('-light', '');
+
+    const parent = img.parentElement;
+
+    function parentHasTransparentBg(el) {
+      if (!el) return false;
+      const bg = getComputedStyle(el).backgroundColor;
+      return (
+        bg === 'transparent' ||
+        bg === 'white' ||
+        bg === '#fff' ||
+        bg === 'fffffff' ||
+        bg === 'rgba(0, 0, 0, 0)' ||
+        bg === 'inherit'
+      );
+    }
+
+    const shouldReplace = parentHasTransparentBg(parent);
+
+    const themeImageMap = {
+      'vclawd-Logo.png': ["vclawd-Logo", "images", ""],
+      'exclamation_cr.svg': ["exclamation_cr", "icons", ""],
+      'lock.svg': ["lock", "icons", ""],
+      'search icon.svg': ["search icon", "icons", ""],
+      'add icon.svg': ["add icon", "icons", ""],
+      'delete_4.svg': ["delete_4", "icons", ""],
+      'team icon.svg': ["team icon", "icons", ""],
+      'download thumbnail.svg': ["download thumbnail", "icons", ""],
+      'copy icon.svg': ["copy icon", "icons", ""],
+      'share_2_u_sq.svg': ["share_2_u_sq", "icons", ""],
+      'dash icon.svg': ["dash icon", "icons", ""],
+      'live icon.svg': ["live icon", "icons", ""],
+      'record scren icon.svg': ["record scren icon", "icons", ""],
+      'video-camera.svg': ["video-camera", "icons", ""],
+      'project icon.svg': ["project icon", "icons", ""],
+      'media icon.svg': ["media icon", "icons", ""],
+      'email icon.svg': ["email icon", "icons", ""],
+      'integration icon.svg': ["integration icon", "icons", ""],
+      'setting icon.svg': ["setting icon", "icons", ""],
+      'agency icons.svg': ["agency icons", "icons", ""],
+      'help icon.svg': ["help icon", "icons", ""],
+      'bonus icon.svg': ["bonus icon", "icons", ""],
+      'video to gif.svg': ["video to gif", "icons", ""],
+      'analysis icon.svg': ["analysis icon", "icons", ""],
+      'notification bell.svg': ["notification bell", "icons", ""],
+      'move icon.svg': ["move icon", "icons", ""]
+    };
+
+    if (themeImageMap[imageName] && shouldReplace) {
+      const [base, folder, sub] = themeImageMap[imageName];
+      img.src = themedAsset(base, folder, sub, imageName.split('.').pop());
+    }
+  });
+
+  // === User dropdown icons
+  const userDropIcons = document.querySelectorAll('img.user--dropdown-icon');
+  userDropIcons.forEach((img) => {
+    const currentSrc = img.getAttribute('src');
+    if (!currentSrc) return;
+
+    const parts = currentSrc.split('/');
+    const filename = parts.pop();
+    const dir = parts.join('/');
+    const [nameBase, ext] = filename.split('.');
+    const cleanBase = nameBase.replace('-light', '');
+    const themedName = isDark ? cleanBase : `${cleanBase}-light`;
+
+    img.src = `${dir}/${themedName}.${ext}`;
+  });
+
+  // === Stat-item icons
+  const statIcons = document.querySelectorAll('.stat-item .icon');
+  statIcons.forEach((img) => {
+    const currentSrc = img.getAttribute('src');
+    if (!currentSrc) return;
+
+    const parts = currentSrc.split('/');
+    const filename = parts.pop();
+    const dir = parts.join('/');
+    const [nameBase, ext] = filename.split('.');
+    const cleanBase = nameBase.replace('-light', '');
+    const themedName = isDark ? cleanBase : `${cleanBase}-light`;
+
+    img.src = `${dir}/${themedName}.${ext}`;
+  });
+}
+
+// === Handle toggle switch
 function handleThemeToggle() {
   const themeSwitch = document.getElementById('theme-switch');
+  if (!themeSwitch) return;
+
   isDark = themeSwitch.checked;
-
-  // Save to localStorage
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
-
   applyThemeClass();
   updateThemeAssets();
 }
 
-// === Listen to theme switch toggle
-document.getElementById('theme-switch').addEventListener('change', handleThemeToggle);
+// === Listen to toggle
+if (themeSwitchEl) {
+  themeSwitchEl.addEventListener('change', handleThemeToggle);
+}
 
-// === Initial update ===
+// === Initial setup
 document.addEventListener("DOMContentLoaded", () => {
   const themeSwitch = document.getElementById('theme-switch');
-  
-  // Set checkbox state based on saved preference
-  themeSwitch.checked = isDark;
+  if (themeSwitch) themeSwitch.checked = isDark;
 
   applyThemeClass();
   updateThemeAssets();
