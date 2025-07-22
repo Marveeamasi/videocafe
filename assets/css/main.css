@@ -435,7 +435,7 @@
 .nav-top .nav-link.active::after {
     content: '';
     height: 4px;
-    background-color: #2699fb;
+    background-color: #e15fff;
     width: calc(100% - 2rem);
     position: absolute;
     bottom: -17px;
@@ -444,7 +444,7 @@
 }
 
 .toggle-light .nav-top .nav-link.active::after {
-    background-color: #e15fff;
+    background-color: #2699fb;
 }
 
 .nav-secondary {
