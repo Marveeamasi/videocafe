@@ -5274,8 +5274,13 @@ input.clr-color {
         color: #000;
     }
 
+
    .toggle-light .nav-team .nav-link.active {
         background: #28008A;
+    }
+
+     .toggle-light .nav-team .teams.nav-link.active {
+        color: white;
     }
 
 .analytic-tab-inner .title {
