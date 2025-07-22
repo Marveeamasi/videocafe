@@ -99,8 +99,9 @@ function updateThemeAssets() {
       'move icon.svg': ["move icon", "icons", ""],
       'find music backgroud music icon.svg': ["find music backgroud music icon", "icons", ""],
       'text to specch icon.svg': ["text to specch icon", "icons", ""],
-       'video footage icon.svg': ["video footage icon", "icons", ""],
-      'create perfect thumbail icon.svg': ["create perfect thumbail icon", "icons", ""]
+      'video footage icon.svg': ["video footage icon", "icons", ""],
+      'create perfect thumbail icon.svg': ["create perfect thumbail icon", "icons", ""],
+      'usage icon.svg': ["usage icon", "icons", ""]
     };
 
     if (themeImageMap[imageName] && shouldReplace) {
