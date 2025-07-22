@@ -96,13 +96,17 @@ function updateThemeAssets() {
       'video to gif.svg': ["video to gif", "icons", ""],
       'analysis icon.svg': ["analysis icon", "icons", ""],
       'notification bell.svg': ["notification bell", "icons", ""],
-      'move icon.svg': ["move icon", "icons", ""]
+      'move icon.svg': ["move icon", "icons", ""],
+      'find music backgroud music icon.svg': ["find music backgroud music icon", "icons", ""],
+      'text to specch icon.svg': ["text to specch icon", "icons", ""],
+       'video footage icon.svg': ["video footage icon", "icons", ""],
+      'create perfect thumbail icon.svg': ["create perfect thumbail icon", "icons", ""]
     };
 
     if (themeImageMap[imageName] && shouldReplace) {
       const [base, folder, sub] = themeImageMap[imageName];
       img.src = themedAsset(base, folder, sub, imageName.split('.').pop());
-    }
+    } 
   });
 
   // === User dropdown icons
