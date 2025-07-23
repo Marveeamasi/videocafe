@@ -14,9 +14,6 @@ if (themeCont) {
   });
 }
 
-console.log('Theme.js loaded ✅');
-console.log('Initial isDark:', isDark);
-
 // === Detect path depth and build path prefix
 const pathDepth = window.location.pathname.split("/").filter(Boolean).length;
 const pathPrefix = "../".repeat(pathDepth);
@@ -52,6 +49,7 @@ function updateThemeAssets() {
     const index = splitmagePth.length - 1;
     let imageName = splitmagePth[index];
     imageName = imageName.replace('-light', '');
+    if(imageName === 'create perfect thumbail icon.svg') console.log('its present')
 
     const parent = img.parentElement;
 
@@ -95,21 +93,23 @@ function updateThemeAssets() {
       'bonus icon.svg': ["bonus icon", "icons", ""],
       'video to gif.svg': ["video to gif", "icons", ""],
       'analysis icon.svg': ["analysis icon", "icons", ""],
+      'usage icon.svg': ["usage icon", "icons", ""],
       'notification bell.svg': ["notification bell", "icons", ""],
+      'create perfect thumbail icon.svg': ["create perfect thumbail icon", "icons", ""],
       'move icon.svg': ["move icon", "icons", ""],
       'find music backgroud music icon.svg': ["find music backgroud music icon", "icons", ""],
       'text to specch icon.svg': ["text to specch icon", "icons", ""],
       'video footage icon.svg': ["video footage icon", "icons", ""],
       'create perfect thumbail icon.svg': ["create perfect thumbail icon", "icons", ""],
-      'usage icon.svg': ["usage icon", "icons", ""]
     };
+
 
     if (themeImageMap[imageName] && shouldReplace) {
       const [base, folder, sub] = themeImageMap[imageName];
       img.src = themedAsset(base, folder, sub, imageName.split('.').pop());
     } 
   });
-
+      
   // === User dropdown icons
   const userDropIcons = document.querySelectorAll('img.user--dropdown-icon');
   userDropIcons.forEach((img) => {

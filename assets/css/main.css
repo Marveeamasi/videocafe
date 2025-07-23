@@ -766,13 +766,15 @@
     border: 2px solid #7b3696;
     padding: 0.5rem;
     border-radius: 0.3rem;
+    background-color: transparent;
 }
 
 .toggle-light .quick-nav .nav-item{
     border: none;
     box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
     color: #000;
-    background-color: #fff;
+    backdrop-filter: blur(4px);
+    background-color: #ffffff80;
 }
 
 .quick-nav .nav-item:not(:last-child) {
