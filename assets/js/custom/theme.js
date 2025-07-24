@@ -24,51 +24,51 @@ let themeImageCache = {};
 // === Preload Theme Images as Image objects ===
 function preloadThemeImages() {
   const themeImageMap = {
-    'vclawd-Logo.png': ["vclawd-Logo", "images", ""],
-    'exclamation_cr.svg': ["exclamation_cr", "icons", ""],
+    'vclawd-Logo.png': ["vclawd-Logo", "images", "", ""],
+    'exclamation_cr.svg': ["exclamation_cr", "icons", "", ""],
     'lock.svg': ["lock", "icons", ""],
-    'search icon.svg': ["search icon", "icons", ""],
-    'add icon.svg': ["add icon", "icons", ""],
-    'delete_4.svg': ["delete_4", "icons", ""],
-    'team icon.svg': ["team icon", "icons", "Lost icons"],
-    'download thumbnail.svg': ["download thumbnail", "icons", ""],
-    'copy icon.svg': ["copy icon", "icons", ""],
-    'share_2_u_sq.svg': ["share_2_u_sq", "icons", ""],
-    'dash icon.svg': ["dash icon", "icons", ""],
-    'live icon.svg': ["live icon", "icons", ""],
-    'record scren icon.svg': ["record scren icon", "icons", ""],
-    'video-camera.svg': ["video-camera", "icons", ""],
-    'project icon.svg': ["project icon", "icons", ""],
-    'media icon.svg': ["media icon", "icons", ""],
-    'email icon.svg': ["email icon", "icons", ""],
-    'integration icon.svg': ["integration icon", "icons", ""],
-    'setting icon.svg': ["setting icon", "icons", ""],
-    'agency icons.svg': ["agency icons", "icons", ""],
-    'help icon.svg': ["help icon", "icons", ""],
-    'bonus icon.svg': ["bonus icon", "icons", ""],
-    'video to gif.svg': ["video to gif", "icons", ""],
-    'analysis icon.svg': ["analysis icon", "icons", ""],
-    'usage icon.svg': ["usage icon", "icons", ""],
-    'notification bell.svg': ["notification bell", "icons", ""],
-    'create perfect thumbail icon.svg': ["create perfect thumbail icon", "icons", ""],
-    'move icon.svg': ["move icon", "icons", ""],
-    'find music backgroud music icon.svg': ["find music backgroud music icon", "icons", ""],
-    'text to specch icon.svg': ["text to specch icon", "icons", ""],
-    'video footage icon.svg': ["video footage icon", "icons", ""]
+    'search icon.svg': ["search icon", "icons", "", ""],
+    'add icon.svg': ["add icon", "icons", "", ""],
+    'delete_4.svg': ["delete_4", "icons", "", ""],
+    'team icon.svg': ["team icon", "icons", "/Lost icons", ""],
+    'download thumbnail.svg': ["download thumbnail", "icons", "", ""],
+    'copy icon.svg': ["copy icon", "icons", "", ""],
+    'share_2_u_sq.svg': ["share_2_u_sq", "icons", "", ""],
+    'dash icon.svg': ["dash icon", "icons", "", ""],
+    'live icon.svg': ["live icon", "icons", "", ""],
+    'record scren icon.svg': ["record scren icon", "icons", "", ""],
+    'video-camera.svg': ["video-camera", "icons", "", ""],
+    'project icon.svg': ["project icon", "icons", "", ""],
+    'media icon.svg': ["media icon", "icons", "", ""],
+    'email icon.svg': ["email icon", "icons", "", ""],
+    'integration icon.svg': ["integration icon", "icons", "", ""],
+    'setting icon.svg': ["setting icon", "icons", "", ""],
+    'agency icons.svg': ["agency icons", "icons", "", ""],
+    'help icon.svg': ["help icon", "icons", "", ""],
+    'bonus icon.svg': ["bonus icon", "icons", "", ""],
+    'video to gif.svg': ["video to gif", "icons", "", ""],
+    'analysis icon.svg': ["analysis icon", "icons", "", ""],
+    'usage icon.svg': ["usage icon", "icons", "", ""],
+    'notification bell.svg': ["notification bell", "icons", "", ""],
+    'create perfect thumbail icon.svg': ["create perfect thumbail icon", "icons", "", ""],
+    'move icon.svg': ["move icon", "icons", "", ""],
+    'find music backgroud music icon.svg': ["find music backgroud music icon", "icons", "", ""],
+    'text to specch icon.svg': ["text to specch icon", "icons", "", ""],
+    'video footage icon.svg': ["video footage icon", "icons", "", ""]
   };
 
   // Preload all images in parallel
-  const preloadPromises = Object.entries(themeImageMap).map(([imageName, [base, folder, sub]]) => {
+  const preloadPromises = Object.entries(themeImageMap).map(([imageName, [base, folder, sub, suber]]) => {
     return new Promise((resolve) => {
       const ext = imageName.split('.').pop();
       
       // Create dark version
       const darkImg = new Image();
-      darkImg.src = themedAsset(base, folder, sub, ext, false);
+      darkImg.src = themedAsset(base, folder, sub, suber, ext, false);
       
       // Create light version
       const lightImg = new Image();
-      lightImg.src = themedAsset(base, folder, sub, ext, true);
+      lightImg.src = themedAsset(base, folder, sub, suber, ext, true);
       
       // Store both in cache
       themeImageCache[imageName] = {
@@ -90,9 +90,9 @@ function preloadThemeImages() {
 }
 
 // === Utility: Get full path for an asset based on theme ===
-function themedAsset(fileBase, folder, subFolder, ext = "png", forceLight = isDark) {
+function themedAsset(fileBase, folder, subFolder, suberFolder, ext = "png", forceLight = isDark) {
   const themeSuffix = forceLight ? "-light" : "";
-  return `${pathPrefix}assets/${folder}${subFolder}/${fileBase}${themeSuffix}.${ext}`;
+  return `${pathPrefix}assets/${folder}${subFolder}${suberFolder}/${fileBase}${themeSuffix}.${ext}`;
 }
 
 // === Apply Theme Class to <body>
