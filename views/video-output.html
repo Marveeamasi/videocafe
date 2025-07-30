@@ -661,20 +661,26 @@ discover high-demand video topic ideas in your niche!
         let slideWidth = 16.66;
         let currentIndex = 0;
 
-        function createSlideschapter() {
-            slides.forEach(slide => {
-                const slideCard = document.createElement('div');
-                slideCard.className = 'slide-card-chapter';
-                slideCard.innerHTML = `
-                <div class="img-chapter">
-                    <img alt="chapter-thumbnail" src="${slide.img}">
-                    </div>
-                    <div class="time-chapter">${slide.time}</div>
-                    <div class="slide-title-chapter">${slide.title}</div>
-                    `;
-                sliderWrapper.appendChild(slideCard);
-            });
-        }
+     function createSlideschapter() {
+    slides.forEach(slide => {
+        const slideCard = document.createElement('div');
+        slideCard.className = 'slide-card-chapter';
+        
+        // Truncate title if longer than 45 characters
+        const truncatedTitle = slide.title.length > 45 
+            ? slide.title.substring(0, 45) + '...' 
+            : slide.title;
+            
+        slideCard.innerHTML = `
+            <div class="img-chapter">
+                <img alt="chapter-thumbnail" src="${slide.img}">
+            </div>
+            <div class="time-chapter">${slide.time}</div>
+            <div class="slide-title-chapter">${truncatedTitle}</div>`;
+            
+        sliderWrapper.appendChild(slideCard);
+    });
+}
 
     function slidechapter(direction) {
     const totalSlides = slides.length;
