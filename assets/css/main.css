@@ -10445,6 +10445,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
     box-sizing: border-box;
     border-radius: 8px;
     color: white;
+    cursor: pointer;
 }
 
 .toggle-light .slide-card-chapter {
